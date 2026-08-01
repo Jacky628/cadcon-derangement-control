@@ -1,0 +1,107 @@
+PASS  T2.geom.baseline_p04: expected=0.425 got=0.425
+PASS  T2.geom.text_correct_p04: expected=0.557 got=0.557
+PASS  T2.geom.text_wrong_p04: expected=0.305 got=0.305
+PASS  T2.geom.text_masked_p04: expected=0.263 got=0.263
+PASS  T2.geom.token_correct_p04: expected=0.443 got=0.443
+PASS  T2.geom.token_wrong_p04: expected=0.215 got=0.215
+PASS  T2.geom.token_masked_p04: expected=0.237 got=0.237
+PASS  T2.geom.baseline_p00: expected=0.0 got=0.0
+PASS  T2.geom.text_correct_p00: expected=0.776 got=0.776
+PASS  T2.geom.text_wrong_p00: expected=0.16 got=0.16
+PASS  T2.geom.text_masked_p00: expected=0.0 got=0.0
+PASS  T2.geom.token_correct_p00: expected=0.5 got=0.5
+PASS  T2.geom.token_wrong_p00: expected=0.077 got=0.077
+PASS  T2.geom.token_masked_p00: expected=0.0 got=0.0
+PASS  T2.regex.baseline_p04: expected=0.451 got=0.451
+PASS  T2.regex.text_correct_p04: expected=0.686 got=0.686
+PASS  T2.regex.text_wrong_p04: expected=0.3 got=0.3
+PASS  T2.regex.text_masked_p04: expected=0.2 got=0.2
+PASS  T2.regex.token_correct_p04: expected=0.658 got=0.658
+PASS  T2.regex.token_wrong_p04: expected=0.261 got=0.261
+PASS  T2.regex.token_masked_p04: expected=0.181 got=0.181
+PASS  T2.regex.baseline_p00: expected=0.0 got=0.0
+PASS  T2.regex.text_correct_p00: expected=0.677 got=0.677
+PASS  T2.regex.text_wrong_p00: expected=0.149 got=0.149
+PASS  T2.regex.text_masked_p00: expected=0.0 got=0.0
+PASS  T2.regex.token_correct_p00: expected=0.628 got=0.628
+PASS  T2.regex.token_wrong_p00: expected=0.139 got=0.139
+PASS  T2.regex.token_masked_p00: expected=0.0 got=0.0
+PASS  42.token_p.s0: expected=6.8e-06 got=6.823588554619006e-06
+PASS  42.token_p.s1: expected=1.8e-05 got=1.8151867136039547e-05
+PASS  42.token_p.s2: expected=0.0008 got=0.0007959049120673328
+PASS  42.text_p.s0: expected=0.073 got=0.073
+PASS  42.text_p.s1: expected=0.014 got=0.014
+PASS  42.text_p.s2: expected=0.003 got=0.003
+PASS  42.wlt_token.s0: expected=[19, 0, 57] got=[19, 0, 57]
+PASS  42.wlt_token.s1: expected=[20, 1, 55] got=[20, 1, 55]
+PASS  42.wlt_token.s2: expected=[19, 4, 53] got=[19, 4, 53]
+PASS  42.wlt_text.s0: expected=[12, 6, 58] got=[12, 6, 58]
+PASS  42.wlt_text.s1: expected=[16, 6, 54] got=[16, 6, 54]
+PASS  42.wlt_text.s2: expected=[16, 4, 56] got=[16, 4, 56]
+PASS  42.vsub_text.s0: expected=-0.155 got=-0.155
+PASS  42.vsub_text.s1: expected=-0.23 got=-0.23
+PASS  42.vsub_text.s2: expected=-0.273 got=-0.273
+PASS  42.vsub_token.s0: expected=-0.288 got=-0.288
+PASS  42.vsub_token.s1: expected=-0.25 got=-0.25
+PASS  42.vsub_token.s2: expected=-0.284 got=-0.284
+PASS  gate.Rc.s0: expected=0.355 got=0.355
+PASS  gate.Rc.s1: expected=0.408 got=0.408
+PASS  gate.Rc.s2: expected=0.355 got=0.355
+PASS  gate.Rw.s0: expected=0.362 got=0.362
+PASS  gate.Rw.s1: expected=0.414 got=0.414
+PASS  gate.Rw.s2: expected=0.414 got=0.414
+PASS  gate.R_exec: expected=0.535 got=0.535
+PASS  gate.base_exec: expected=0.553 got=0.553
+PASS  D.dropM.s0: expected=0.184 got=0.184
+PASS  D.dropM.s1: expected=0.289 got=0.289
+PASS  D.dropM.s2: expected=0.283 got=0.283
+PASS  D.dropR.s0: expected=-0.007 got=-0.007
+PASS  D.dropR.s1: expected=-0.007 got=-0.007
+PASS  D.dropR.s2: expected=-0.059 got=-0.059
+PASS  D.inter.s0: expected=0.191 got=0.191
+PASS  D.inter.s1: expected=0.296 got=0.296
+PASS  D.inter.s2: expected=0.342 got=0.342
+PASS  D.p.s0: expected=0.0042 got=0.004167097495843967
+PASS  D.p.s1: expected=6.7e-06 got=6.748780166313842e-06
+PASS  D.p.s2: expected=3.6e-06 got=3.5815109209776308e-06
+PASS  D.nonzero: expected=[26, 26, 32] got=[26, 26, 32]
+PASS  D.guard_a: expected=0.391 got=0.391
+PASS  D.guard_a_n: expected=[20, 33, 34] got=[20, 33, 34]
+PASS  D.guard_b_u: expected=0.31 got=0.31
+PASS  D.guard_b_w: expected=0.276 got=0.276
+PASS  E.gapMR.s0: expected=0.47 got=0.47
+PASS  E.gapMR.s1: expected=0.51 got=0.51
+PASS  E.gapMR.s2: expected=0.49 got=0.49
+PASS  E.R: expected=0.71 got=0.71
+PASS  E.B: expected=0.77 got=0.77
+PASS  E.M: expected=0.94 got=0.94
+PASS  E.nR: expected=120 got=120
+PASS  E.p_RB: expected=0.24 got=0.24
+PASS  E.p_RM: expected=1.6e-08 got=1.5835155541169753e-08
+PASS  F.R: expected=[[28, 30], [30, 42], [41, 42]] got=[[28, 30], [30, 42], [41, 42]]
+PASS  F.M: expected=[[13, 33], [15, 43], [18, 42]] got=[[13, 33], [15, 43], [18, 42]]
+PASS  G.c: expected=0.776 got=0.776
+PASS  G.m: expected=0.0 got=0.0
+PASS  G.ex.s0: expected=0.0 got=0.0
+PASS  G.ex.s1s2_95_100: expected=0.95-1.00 got=0.96/1.00
+PASS  H.wrong_exec: expected=0.645 got=0.645
+PASS  H.p.s0: expected=0.061 got=0.06076258495870654
+PASS  H.p.s1: expected=0.005 got=0.00540391454165948
+PASS  H.p.s2: expected=0.0002 got=0.00015990328266683322
+PASS  I.corrupted: expected=0.393 got=0.393
+PASS  I.random: expected=0.219 got=0.219
+PASS  I.c_cor.s0: expected=0.091 got=0.09086154420059728
+PASS  I.c_cor.s1: expected=0.0003 got=0.00026100383671439844
+PASS  I.c_cor.s2: expected=0.001 got=0.0010216963790714237
+PASS  I.cor_w.s0: expected=0.074 got=0.074
+PASS  I.cor_w.s1: expected=0.056 got=0.056
+PASS  I.cor_w.s2: expected=0.038 got=0.038
+PASS  I.w_rnd.s0: expected=0.011 got=0.011
+PASS  I.w_rnd.s1: expected=0.006 got=0.006
+PASS  I.w_rnd.s2: expected=0.04 got=0.04
+PASS  L.dropNGON_pass: expected=n_dir>=2,n_sig>=2 got=n_dir=3,n_sig=2
+PASS  M.content.s2: expected=-0.059 got=-0.059
+PASS  M.artifact: expected=[56, 76, 77, 97] got=[56, 76, 77, 97]
+PASS  N.len_r~0.21: expected=~0.21 got=0.257
+
+105/105 PASS

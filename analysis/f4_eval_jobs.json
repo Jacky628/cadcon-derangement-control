@@ -1,0 +1,200 @@
+[
+ {
+  "kind": "eval",
+  "condition": "f4_R_correct_p04_s0",
+  "ckpt": "f4_text_shufhdr_seed0",
+  "seed": 0,
+  "eval_mode": "text",
+  "train_mode": "text",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "kind": "eval",
+  "condition": "f4_R_shuffled_p04_s0",
+  "ckpt": "f4_text_shufhdr_seed0",
+  "seed": 0,
+  "eval_mode": "text",
+  "train_mode": "text",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "shuffled"
+ },
+ {
+  "kind": "eval",
+  "condition": "f4_R_masked_p04_s0",
+  "ckpt": "f4_text_shufhdr_seed0",
+  "seed": 0,
+  "eval_mode": "none",
+  "train_mode": "text",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "kind": "eval",
+  "condition": "f4_R_correct_p00_s0",
+  "ckpt": "f4_text_shufhdr_seed0",
+  "seed": 0,
+  "eval_mode": "text",
+  "train_mode": "text",
+  "prefix_fraction": 0.0,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "kind": "eval",
+  "condition": "f4_M_corrupted_p04_s0",
+  "ckpt": "sft_constraint_text_seed0",
+  "seed": 0,
+  "eval_mode": "text",
+  "train_mode": "text",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "corrupted_primary"
+ },
+ {
+  "kind": "eval",
+  "condition": "f4_M_random_p04_s0",
+  "ckpt": "sft_constraint_text_seed0",
+  "seed": 0,
+  "eval_mode": "text",
+  "train_mode": "text",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "random"
+ },
+ {
+  "kind": "eval",
+  "condition": "f4_R_correct_p04_s1",
+  "ckpt": "f4_text_shufhdr_seed1",
+  "seed": 1,
+  "eval_mode": "text",
+  "train_mode": "text",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "kind": "eval",
+  "condition": "f4_R_shuffled_p04_s1",
+  "ckpt": "f4_text_shufhdr_seed1",
+  "seed": 1,
+  "eval_mode": "text",
+  "train_mode": "text",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "shuffled"
+ },
+ {
+  "kind": "eval",
+  "condition": "f4_R_masked_p04_s1",
+  "ckpt": "f4_text_shufhdr_seed1",
+  "seed": 1,
+  "eval_mode": "none",
+  "train_mode": "text",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "kind": "eval",
+  "condition": "f4_R_correct_p00_s1",
+  "ckpt": "f4_text_shufhdr_seed1",
+  "seed": 1,
+  "eval_mode": "text",
+  "train_mode": "text",
+  "prefix_fraction": 0.0,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "kind": "eval",
+  "condition": "f4_M_corrupted_p04_s1",
+  "ckpt": "sft_constraint_text_seed1",
+  "seed": 1,
+  "eval_mode": "text",
+  "train_mode": "text",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "corrupted_primary"
+ },
+ {
+  "kind": "eval",
+  "condition": "f4_M_random_p04_s1",
+  "ckpt": "sft_constraint_text_seed1",
+  "seed": 1,
+  "eval_mode": "text",
+  "train_mode": "text",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "random"
+ },
+ {
+  "kind": "eval",
+  "condition": "f4_R_correct_p04_s2",
+  "ckpt": "f4_text_shufhdr_seed2",
+  "seed": 2,
+  "eval_mode": "text",
+  "train_mode": "text",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "kind": "eval",
+  "condition": "f4_R_shuffled_p04_s2",
+  "ckpt": "f4_text_shufhdr_seed2",
+  "seed": 2,
+  "eval_mode": "text",
+  "train_mode": "text",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "shuffled"
+ },
+ {
+  "kind": "eval",
+  "condition": "f4_R_masked_p04_s2",
+  "ckpt": "f4_text_shufhdr_seed2",
+  "seed": 2,
+  "eval_mode": "none",
+  "train_mode": "text",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "kind": "eval",
+  "condition": "f4_R_correct_p00_s2",
+  "ckpt": "f4_text_shufhdr_seed2",
+  "seed": 2,
+  "eval_mode": "text",
+  "train_mode": "text",
+  "prefix_fraction": 0.0,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "kind": "eval",
+  "condition": "f4_M_corrupted_p04_s2",
+  "ckpt": "sft_constraint_text_seed2",
+  "seed": 2,
+  "eval_mode": "text",
+  "train_mode": "text",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "corrupted_primary"
+ },
+ {
+  "kind": "eval",
+  "condition": "f4_M_random_p04_s2",
+  "ckpt": "sft_constraint_text_seed2",
+  "seed": 2,
+  "eval_mode": "text",
+  "train_mode": "text",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "random"
+ }
+]

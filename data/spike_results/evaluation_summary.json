@@ -1,0 +1,419 @@
+{
+  "spike_baseline_p00|seed0": {
+    "n": 100,
+    "executable": 0,
+    "executability_rate": 0.0,
+    "status_counts": {
+      "empty_program": 100
+    }
+  },
+  "spike_baseline_p00|seed1": {
+    "n": 100,
+    "executable": 0,
+    "executability_rate": 0.0,
+    "status_counts": {
+      "empty_program": 100
+    }
+  },
+  "spike_baseline_p00|seed2": {
+    "n": 100,
+    "executable": 0,
+    "executability_rate": 0.0,
+    "status_counts": {
+      "empty_program": 100
+    }
+  },
+  "spike_baseline_p04|seed0": {
+    "n": 100,
+    "executable": 50,
+    "executability_rate": 0.5,
+    "status_counts": {
+      "AttributeError": 16,
+      "ok": 50,
+      "Standard_ConstructionError": 34
+    }
+  },
+  "spike_baseline_p04|seed1": {
+    "n": 100,
+    "executable": 60,
+    "executability_rate": 0.6,
+    "status_counts": {
+      "AttributeError": 16,
+      "ok": 60,
+      "Standard_ConstructionError": 24
+    }
+  },
+  "spike_baseline_p04|seed2": {
+    "n": 100,
+    "executable": 68,
+    "executability_rate": 0.68,
+    "status_counts": {
+      "AttributeError": 16,
+      "ok": 68,
+      "Standard_ConstructionError": 14,
+      "NameError": 2
+    }
+  },
+  "spike_text_correct_p00|seed0": {
+    "n": 100,
+    "executable": 68,
+    "executability_rate": 0.68,
+    "status_counts": {
+      "ok": 68,
+      "empty_program": 14,
+      "Standard_ConstructionError": 18
+    }
+  },
+  "spike_text_correct_p00|seed1": {
+    "n": 100,
+    "executable": 84,
+    "executability_rate": 0.84,
+    "status_counts": {
+      "ok": 84,
+      "Standard_ConstructionError": 2,
+      "empty_program": 14
+    }
+  },
+  "spike_text_correct_p00|seed2": {
+    "n": 100,
+    "executable": 86,
+    "executability_rate": 0.86,
+    "status_counts": {
+      "Standard_ConstructionError": 12,
+      "NameError": 2,
+      "ok": 86
+    }
+  },
+  "spike_text_correct_p04|seed0": {
+    "n": 100,
+    "executable": 62,
+    "executability_rate": 0.62,
+    "status_counts": {
+      "AttributeError": 16,
+      "ok": 62,
+      "Standard_ConstructionError": 22
+    }
+  },
+  "spike_text_correct_p04|seed1": {
+    "n": 100,
+    "executable": 73,
+    "executability_rate": 0.73,
+    "status_counts": {
+      "AttributeError": 16,
+      "ok": 73,
+      "Standard_ConstructionError": 10,
+      "no_output": 1
+    }
+  },
+  "spike_text_correct_p04|seed2": {
+    "n": 100,
+    "executable": 72,
+    "executability_rate": 0.72,
+    "status_counts": {
+      "AttributeError": 16,
+      "ok": 72,
+      "Standard_ConstructionError": 12
+    }
+  },
+  "spike_text_masked_p00|seed0": {
+    "n": 100,
+    "executable": 0,
+    "executability_rate": 0.0,
+    "status_counts": {
+      "empty_program": 100
+    }
+  },
+  "spike_text_masked_p00|seed1": {
+    "n": 100,
+    "executable": 96,
+    "executability_rate": 0.96,
+    "status_counts": {
+      "ok": 96,
+      "empty_program": 4
+    }
+  },
+  "spike_text_masked_p00|seed2": {
+    "n": 100,
+    "executable": 100,
+    "executability_rate": 1.0,
+    "status_counts": {
+      "ok": 100
+    }
+  },
+  "spike_text_masked_p04|seed0": {
+    "n": 100,
+    "executable": 80,
+    "executability_rate": 0.8,
+    "status_counts": {
+      "AttributeError": 16,
+      "ok": 80,
+      "Standard_ConstructionError": 4
+    }
+  },
+  "spike_text_masked_p04|seed1": {
+    "n": 100,
+    "executable": 82,
+    "executability_rate": 0.82,
+    "status_counts": {
+      "AttributeError": 16,
+      "ok": 82,
+      "Standard_ConstructionError": 2
+    }
+  },
+  "spike_text_masked_p04|seed2": {
+    "n": 100,
+    "executable": 80,
+    "executability_rate": 0.8,
+    "status_counts": {
+      "AttributeError": 16,
+      "ok": 80,
+      "Standard_ConstructionError": 4
+    }
+  },
+  "spike_text_shuffled_p00|seed0": {
+    "n": 100,
+    "executable": 71,
+    "executability_rate": 0.71,
+    "status_counts": {
+      "empty_program": 13,
+      "ok": 71,
+      "Standard_ConstructionError": 16
+    }
+  },
+  "spike_text_shuffled_p00|seed1": {
+    "n": 100,
+    "executable": 80,
+    "executability_rate": 0.8,
+    "status_counts": {
+      "ok": 80,
+      "empty_program": 12,
+      "Standard_ConstructionError": 8
+    }
+  },
+  "spike_text_shuffled_p00|seed2": {
+    "n": 100,
+    "executable": 88,
+    "executability_rate": 0.88,
+    "status_counts": {
+      "ok": 88,
+      "Standard_ConstructionError": 10,
+      "NameError": 2
+    }
+  },
+  "spike_text_shuffled_p04|seed0": {
+    "n": 100,
+    "executable": 68,
+    "executability_rate": 0.68,
+    "status_counts": {
+      "AttributeError": 16,
+      "ok": 68,
+      "Standard_ConstructionError": 14,
+      "NameError": 2
+    }
+  },
+  "spike_text_shuffled_p04|seed1": {
+    "n": 100,
+    "executable": 70,
+    "executability_rate": 0.7,
+    "status_counts": {
+      "AttributeError": 16,
+      "ok": 70,
+      "Standard_ConstructionError": 12,
+      "NameError": 2
+    }
+  },
+  "spike_text_shuffled_p04|seed2": {
+    "n": 100,
+    "executable": 66,
+    "executability_rate": 0.66,
+    "status_counts": {
+      "AttributeError": 16,
+      "ok": 66,
+      "Standard_ConstructionError": 18
+    }
+  },
+  "spike_token_correct_p00|seed0": {
+    "n": 100,
+    "executable": 48,
+    "executability_rate": 0.48,
+    "status_counts": {
+      "Standard_ConstructionError": 30,
+      "NameError": 8,
+      "ok": 48,
+      "empty_program": 14
+    }
+  },
+  "spike_token_correct_p00|seed1": {
+    "n": 100,
+    "executable": 54,
+    "executability_rate": 0.54,
+    "status_counts": {
+      "Standard_ConstructionError": 32,
+      "ok": 54,
+      "empty_program": 14
+    }
+  },
+  "spike_token_correct_p00|seed2": {
+    "n": 100,
+    "executable": 60,
+    "executability_rate": 0.6,
+    "status_counts": {
+      "Standard_ConstructionError": 20,
+      "ok": 60,
+      "empty_program": 14,
+      "NameError": 6
+    }
+  },
+  "spike_token_correct_p04|seed0": {
+    "n": 100,
+    "executable": 62,
+    "executability_rate": 0.62,
+    "status_counts": {
+      "AttributeError": 16,
+      "ok": 62,
+      "Standard_ConstructionError": 16,
+      "NameError": 6
+    }
+  },
+  "spike_token_correct_p04|seed1": {
+    "n": 100,
+    "executable": 56,
+    "executability_rate": 0.56,
+    "status_counts": {
+      "AttributeError": 16,
+      "ok": 56,
+      "Standard_ConstructionError": 22,
+      "NameError": 6
+    }
+  },
+  "spike_token_correct_p04|seed2": {
+    "n": 100,
+    "executable": 60,
+    "executability_rate": 0.6,
+    "status_counts": {
+      "AttributeError": 16,
+      "ok": 60,
+      "Standard_ConstructionError": 18,
+      "NameError": 6
+    }
+  },
+  "spike_token_masked_p00|seed0": {
+    "n": 100,
+    "executable": 0,
+    "executability_rate": 0.0,
+    "status_counts": {
+      "empty_program": 100
+    }
+  },
+  "spike_token_masked_p00|seed1": {
+    "n": 100,
+    "executable": 0,
+    "executability_rate": 0.0,
+    "status_counts": {
+      "empty_program": 100
+    }
+  },
+  "spike_token_masked_p00|seed2": {
+    "n": 100,
+    "executable": 0,
+    "executability_rate": 0.0,
+    "status_counts": {
+      "empty_program": 100
+    }
+  },
+  "spike_token_masked_p04|seed0": {
+    "n": 100,
+    "executable": 80,
+    "executability_rate": 0.8,
+    "status_counts": {
+      "AttributeError": 16,
+      "ok": 80,
+      "Standard_ConstructionError": 4
+    }
+  },
+  "spike_token_masked_p04|seed1": {
+    "n": 100,
+    "executable": 80,
+    "executability_rate": 0.8,
+    "status_counts": {
+      "AttributeError": 16,
+      "ok": 80,
+      "Standard_ConstructionError": 4
+    }
+  },
+  "spike_token_masked_p04|seed2": {
+    "n": 100,
+    "executable": 80,
+    "executability_rate": 0.8,
+    "status_counts": {
+      "AttributeError": 16,
+      "ok": 80,
+      "Standard_ConstructionError": 4
+    }
+  },
+  "spike_token_shuffled_p00|seed0": {
+    "n": 100,
+    "executable": 53,
+    "executability_rate": 0.53,
+    "status_counts": {
+      "empty_program": 13,
+      "ok": 53,
+      "Standard_ConstructionError": 28,
+      "NameError": 6
+    }
+  },
+  "spike_token_shuffled_p00|seed1": {
+    "n": 100,
+    "executable": 48,
+    "executability_rate": 0.48,
+    "status_counts": {
+      "ok": 48,
+      "Standard_ConstructionError": 40,
+      "empty_program": 12
+    }
+  },
+  "spike_token_shuffled_p00|seed2": {
+    "n": 100,
+    "executable": 60,
+    "executability_rate": 0.6,
+    "status_counts": {
+      "ok": 60,
+      "NameError": 8,
+      "empty_program": 13,
+      "Standard_ConstructionError": 19
+    }
+  },
+  "spike_token_shuffled_p04|seed0": {
+    "n": 100,
+    "executable": 60,
+    "executability_rate": 0.6,
+    "status_counts": {
+      "AttributeError": 15,
+      "ok": 60,
+      "Standard_ConstructionError": 18,
+      "NameError": 7
+    }
+  },
+  "spike_token_shuffled_p04|seed1": {
+    "n": 100,
+    "executable": 44,
+    "executability_rate": 0.44,
+    "status_counts": {
+      "AttributeError": 14,
+      "ok": 44,
+      "Standard_ConstructionError": 31,
+      "NameError": 11
+    }
+  },
+  "spike_token_shuffled_p04|seed2": {
+    "n": 100,
+    "executable": 55,
+    "executability_rate": 0.55,
+    "status_counts": {
+      "AttributeError": 15,
+      "ok": 55,
+      "Standard_ConstructionError": 23,
+      "NameError": 7
+    }
+  }
+}

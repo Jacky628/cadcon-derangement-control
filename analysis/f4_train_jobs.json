@@ -1,0 +1,38 @@
+[
+ {
+  "kind": "train",
+  "condition": "f4_text_shufhdr_seed0",
+  "ckpt": "f4_text_shufhdr_seed0",
+  "seed": 0,
+  "train_mode": "text",
+  "train_header_content": "shuffled",
+  "header_dropout": 0.0,
+  "eval_mode": "text",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100
+ },
+ {
+  "kind": "train",
+  "condition": "f4_text_shufhdr_seed1",
+  "ckpt": "f4_text_shufhdr_seed1",
+  "seed": 1,
+  "train_mode": "text",
+  "train_header_content": "shuffled",
+  "header_dropout": 0.0,
+  "eval_mode": "text",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100
+ },
+ {
+  "kind": "train",
+  "condition": "f4_text_shufhdr_seed2",
+  "ckpt": "f4_text_shufhdr_seed2",
+  "seed": 2,
+  "train_mode": "text",
+  "train_header_content": "shuffled",
+  "header_dropout": 0.0,
+  "eval_mode": "text",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100
+ }
+]

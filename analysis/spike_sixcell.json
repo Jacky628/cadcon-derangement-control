@@ -1,0 +1,422 @@
+[
+ {
+  "condition": "spike_token_correct_p00",
+  "ckpt": "sft_constraint_tokens_seed0",
+  "seed": 0,
+  "eval_mode": "token",
+  "train_mode": "token",
+  "prefix_fraction": 0.0,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_token_shuffled_p00",
+  "ckpt": "sft_constraint_tokens_seed0",
+  "seed": 0,
+  "eval_mode": "token",
+  "train_mode": "token",
+  "prefix_fraction": 0.0,
+  "eval_subset_size": 100,
+  "header_source": "shuffled"
+ },
+ {
+  "condition": "spike_token_masked_p00",
+  "ckpt": "sft_constraint_tokens_seed0",
+  "seed": 0,
+  "eval_mode": "none",
+  "train_mode": "token",
+  "prefix_fraction": 0.0,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_token_correct_p00",
+  "ckpt": "sft_constraint_tokens_seed1",
+  "seed": 1,
+  "eval_mode": "token",
+  "train_mode": "token",
+  "prefix_fraction": 0.0,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_token_shuffled_p00",
+  "ckpt": "sft_constraint_tokens_seed1",
+  "seed": 1,
+  "eval_mode": "token",
+  "train_mode": "token",
+  "prefix_fraction": 0.0,
+  "eval_subset_size": 100,
+  "header_source": "shuffled"
+ },
+ {
+  "condition": "spike_token_masked_p00",
+  "ckpt": "sft_constraint_tokens_seed1",
+  "seed": 1,
+  "eval_mode": "none",
+  "train_mode": "token",
+  "prefix_fraction": 0.0,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_token_correct_p00",
+  "ckpt": "sft_constraint_tokens_seed2",
+  "seed": 2,
+  "eval_mode": "token",
+  "train_mode": "token",
+  "prefix_fraction": 0.0,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_token_shuffled_p00",
+  "ckpt": "sft_constraint_tokens_seed2",
+  "seed": 2,
+  "eval_mode": "token",
+  "train_mode": "token",
+  "prefix_fraction": 0.0,
+  "eval_subset_size": 100,
+  "header_source": "shuffled"
+ },
+ {
+  "condition": "spike_token_masked_p00",
+  "ckpt": "sft_constraint_tokens_seed2",
+  "seed": 2,
+  "eval_mode": "none",
+  "train_mode": "token",
+  "prefix_fraction": 0.0,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_token_correct_p04",
+  "ckpt": "sft_constraint_tokens_seed0",
+  "seed": 0,
+  "eval_mode": "token",
+  "train_mode": "token",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_token_shuffled_p04",
+  "ckpt": "sft_constraint_tokens_seed0",
+  "seed": 0,
+  "eval_mode": "token",
+  "train_mode": "token",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "shuffled"
+ },
+ {
+  "condition": "spike_token_masked_p04",
+  "ckpt": "sft_constraint_tokens_seed0",
+  "seed": 0,
+  "eval_mode": "none",
+  "train_mode": "token",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_token_correct_p04",
+  "ckpt": "sft_constraint_tokens_seed1",
+  "seed": 1,
+  "eval_mode": "token",
+  "train_mode": "token",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_token_shuffled_p04",
+  "ckpt": "sft_constraint_tokens_seed1",
+  "seed": 1,
+  "eval_mode": "token",
+  "train_mode": "token",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "shuffled"
+ },
+ {
+  "condition": "spike_token_masked_p04",
+  "ckpt": "sft_constraint_tokens_seed1",
+  "seed": 1,
+  "eval_mode": "none",
+  "train_mode": "token",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_token_correct_p04",
+  "ckpt": "sft_constraint_tokens_seed2",
+  "seed": 2,
+  "eval_mode": "token",
+  "train_mode": "token",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_token_shuffled_p04",
+  "ckpt": "sft_constraint_tokens_seed2",
+  "seed": 2,
+  "eval_mode": "token",
+  "train_mode": "token",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "shuffled"
+ },
+ {
+  "condition": "spike_token_masked_p04",
+  "ckpt": "sft_constraint_tokens_seed2",
+  "seed": 2,
+  "eval_mode": "none",
+  "train_mode": "token",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_text_correct_p00",
+  "ckpt": "sft_constraint_text_seed0",
+  "seed": 0,
+  "eval_mode": "text",
+  "train_mode": "text",
+  "prefix_fraction": 0.0,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_text_shuffled_p00",
+  "ckpt": "sft_constraint_text_seed0",
+  "seed": 0,
+  "eval_mode": "text",
+  "train_mode": "text",
+  "prefix_fraction": 0.0,
+  "eval_subset_size": 100,
+  "header_source": "shuffled"
+ },
+ {
+  "condition": "spike_text_masked_p00",
+  "ckpt": "sft_constraint_text_seed0",
+  "seed": 0,
+  "eval_mode": "none",
+  "train_mode": "text",
+  "prefix_fraction": 0.0,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_text_correct_p00",
+  "ckpt": "sft_constraint_text_seed1",
+  "seed": 1,
+  "eval_mode": "text",
+  "train_mode": "text",
+  "prefix_fraction": 0.0,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_text_shuffled_p00",
+  "ckpt": "sft_constraint_text_seed1",
+  "seed": 1,
+  "eval_mode": "text",
+  "train_mode": "text",
+  "prefix_fraction": 0.0,
+  "eval_subset_size": 100,
+  "header_source": "shuffled"
+ },
+ {
+  "condition": "spike_text_masked_p00",
+  "ckpt": "sft_constraint_text_seed1",
+  "seed": 1,
+  "eval_mode": "none",
+  "train_mode": "text",
+  "prefix_fraction": 0.0,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_text_correct_p00",
+  "ckpt": "sft_constraint_text_seed2",
+  "seed": 2,
+  "eval_mode": "text",
+  "train_mode": "text",
+  "prefix_fraction": 0.0,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_text_shuffled_p00",
+  "ckpt": "sft_constraint_text_seed2",
+  "seed": 2,
+  "eval_mode": "text",
+  "train_mode": "text",
+  "prefix_fraction": 0.0,
+  "eval_subset_size": 100,
+  "header_source": "shuffled"
+ },
+ {
+  "condition": "spike_text_masked_p00",
+  "ckpt": "sft_constraint_text_seed2",
+  "seed": 2,
+  "eval_mode": "none",
+  "train_mode": "text",
+  "prefix_fraction": 0.0,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_text_correct_p04",
+  "ckpt": "sft_constraint_text_seed0",
+  "seed": 0,
+  "eval_mode": "text",
+  "train_mode": "text",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_text_shuffled_p04",
+  "ckpt": "sft_constraint_text_seed0",
+  "seed": 0,
+  "eval_mode": "text",
+  "train_mode": "text",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "shuffled"
+ },
+ {
+  "condition": "spike_text_masked_p04",
+  "ckpt": "sft_constraint_text_seed0",
+  "seed": 0,
+  "eval_mode": "none",
+  "train_mode": "text",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_text_correct_p04",
+  "ckpt": "sft_constraint_text_seed1",
+  "seed": 1,
+  "eval_mode": "text",
+  "train_mode": "text",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_text_shuffled_p04",
+  "ckpt": "sft_constraint_text_seed1",
+  "seed": 1,
+  "eval_mode": "text",
+  "train_mode": "text",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "shuffled"
+ },
+ {
+  "condition": "spike_text_masked_p04",
+  "ckpt": "sft_constraint_text_seed1",
+  "seed": 1,
+  "eval_mode": "none",
+  "train_mode": "text",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_text_correct_p04",
+  "ckpt": "sft_constraint_text_seed2",
+  "seed": 2,
+  "eval_mode": "text",
+  "train_mode": "text",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_text_shuffled_p04",
+  "ckpt": "sft_constraint_text_seed2",
+  "seed": 2,
+  "eval_mode": "text",
+  "train_mode": "text",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "shuffled"
+ },
+ {
+  "condition": "spike_text_masked_p04",
+  "ckpt": "sft_constraint_text_seed2",
+  "seed": 2,
+  "eval_mode": "none",
+  "train_mode": "text",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_baseline_p00",
+  "ckpt": "sft_no_constraints_seed0",
+  "seed": 0,
+  "eval_mode": "none",
+  "train_mode": "none",
+  "prefix_fraction": 0.0,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_baseline_p00",
+  "ckpt": "sft_no_constraints_seed1",
+  "seed": 1,
+  "eval_mode": "none",
+  "train_mode": "none",
+  "prefix_fraction": 0.0,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_baseline_p00",
+  "ckpt": "sft_no_constraints_seed2",
+  "seed": 2,
+  "eval_mode": "none",
+  "train_mode": "none",
+  "prefix_fraction": 0.0,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_baseline_p04",
+  "ckpt": "sft_no_constraints_seed0",
+  "seed": 0,
+  "eval_mode": "none",
+  "train_mode": "none",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_baseline_p04",
+  "ckpt": "sft_no_constraints_seed1",
+  "seed": 1,
+  "eval_mode": "none",
+  "train_mode": "none",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ },
+ {
+  "condition": "spike_baseline_p04",
+  "ckpt": "sft_no_constraints_seed2",
+  "seed": 2,
+  "eval_mode": "none",
+  "train_mode": "none",
+  "prefix_fraction": 0.4,
+  "eval_subset_size": 100,
+  "header_source": "correct"
+ }
+]

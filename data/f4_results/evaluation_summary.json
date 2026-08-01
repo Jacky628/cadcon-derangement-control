@@ -1,0 +1,193 @@
+{
+  "f4_M_corrupted_p04_s0|seed0": {
+    "n": 100,
+    "executable": 63,
+    "executability_rate": 0.63,
+    "status_counts": {
+      "AttributeError": 16,
+      "ok": 63,
+      "Standard_ConstructionError": 17,
+      "NameError": 4
+    }
+  },
+  "f4_M_corrupted_p04_s1|seed1": {
+    "n": 100,
+    "executable": 74,
+    "executability_rate": 0.74,
+    "status_counts": {
+      "AttributeError": 16,
+      "ok": 74,
+      "NameError": 1,
+      "Standard_ConstructionError": 9
+    }
+  },
+  "f4_M_corrupted_p04_s2|seed2": {
+    "n": 100,
+    "executable": 65,
+    "executability_rate": 0.65,
+    "status_counts": {
+      "AttributeError": 16,
+      "ok": 65,
+      "Standard_ConstructionError": 18,
+      "NameError": 1
+    }
+  },
+  "f4_M_random_p04_s0|seed0": {
+    "n": 100,
+    "executable": 68,
+    "executability_rate": 0.68,
+    "status_counts": {
+      "AttributeError": 16,
+      "ok": 68,
+      "Standard_ConstructionError": 14,
+      "ValueError": 2
+    }
+  },
+  "f4_M_random_p04_s1|seed1": {
+    "n": 100,
+    "executable": 72,
+    "executability_rate": 0.72,
+    "status_counts": {
+      "NameError": 1,
+      "AttributeError": 15,
+      "ok": 72,
+      "Standard_ConstructionError": 12
+    }
+  },
+  "f4_M_random_p04_s2|seed2": {
+    "n": 100,
+    "executable": 71,
+    "executability_rate": 0.71,
+    "status_counts": {
+      "AttributeError": 16,
+      "ok": 71,
+      "Standard_ConstructionError": 13
+    }
+  },
+  "f4_R_correct_p00_s0|seed0": {
+    "n": 100,
+    "executable": 0,
+    "executability_rate": 0.0,
+    "status_counts": {
+      "Standard_ConstructionError": 86,
+      "empty_program": 14
+    }
+  },
+  "f4_R_correct_p00_s1|seed1": {
+    "n": 100,
+    "executable": 86,
+    "executability_rate": 0.86,
+    "status_counts": {
+      "ok": 86,
+      "empty_program": 14
+    }
+  },
+  "f4_R_correct_p00_s2|seed2": {
+    "n": 100,
+    "executable": 86,
+    "executability_rate": 0.86,
+    "status_counts": {
+      "ok": 86,
+      "empty_program": 14
+    }
+  },
+  "f4_R_correct_p04_s0|seed0": {
+    "n": 100,
+    "executable": 34,
+    "executability_rate": 0.34,
+    "status_counts": {
+      "AttributeError": 6,
+      "ok": 34,
+      "Standard_ConstructionError": 50,
+      "NameError": 10
+    }
+  },
+  "f4_R_correct_p04_s1|seed1": {
+    "n": 100,
+    "executable": 70,
+    "executability_rate": 0.7,
+    "status_counts": {
+      "NameError": 12,
+      "ok": 70,
+      "AttributeError": 4,
+      "Standard_ConstructionError": 14
+    }
+  },
+  "f4_R_correct_p04_s2|seed2": {
+    "n": 100,
+    "executable": 62,
+    "executability_rate": 0.62,
+    "status_counts": {
+      "AttributeError": 8,
+      "ok": 62,
+      "Standard_ConstructionError": 20,
+      "NameError": 10
+    }
+  },
+  "f4_R_masked_p04_s0|seed0": {
+    "n": 100,
+    "executable": 34,
+    "executability_rate": 0.34,
+    "status_counts": {
+      "AttributeError": 6,
+      "ok": 34,
+      "Standard_ConstructionError": 48,
+      "NameError": 12
+    }
+  },
+  "f4_R_masked_p04_s1|seed1": {
+    "n": 100,
+    "executable": 58,
+    "executability_rate": 0.58,
+    "status_counts": {
+      "NameError": 12,
+      "ok": 58,
+      "Standard_ConstructionError": 26,
+      "AttributeError": 4
+    }
+  },
+  "f4_R_masked_p04_s2|seed2": {
+    "n": 100,
+    "executable": 68,
+    "executability_rate": 0.68,
+    "status_counts": {
+      "AttributeError": 10,
+      "ok": 68,
+      "Standard_ConstructionError": 14,
+      "NameError": 8
+    }
+  },
+  "f4_R_shuffled_p04_s0|seed0": {
+    "n": 100,
+    "executable": 35,
+    "executability_rate": 0.35,
+    "status_counts": {
+      "AttributeError": 7,
+      "ok": 35,
+      "Standard_ConstructionError": 48,
+      "NameError": 10
+    }
+  },
+  "f4_R_shuffled_p04_s1|seed1": {
+    "n": 100,
+    "executable": 68,
+    "executability_rate": 0.68,
+    "status_counts": {
+      "NameError": 12,
+      "ok": 68,
+      "Standard_ConstructionError": 16,
+      "AttributeError": 4
+    }
+  },
+  "f4_R_shuffled_p04_s2|seed2": {
+    "n": 100,
+    "executable": 67,
+    "executability_rate": 0.67,
+    "status_counts": {
+      "AttributeError": 9,
+      "ok": 67,
+      "Standard_ConstructionError": 15,
+      "NameError": 9
+    }
+  }
+}

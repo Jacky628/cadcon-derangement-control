@@ -1,0 +1,450 @@
+{
+  "spike_token_correct_p00": {
+    "0": {
+      "validity_rate": 0.48,
+      "valid_count": 48,
+      "total_count": 100,
+      "validity_simple": 0.48,
+      "validity_complex": null,
+      "adherence_recall": 0.627906976744186,
+      "adherence_precision": 1.0,
+      "adherence_f1": 0.7714285714285715
+    },
+    "1": {
+      "validity_rate": 0.54,
+      "valid_count": 54,
+      "total_count": 100,
+      "validity_simple": 0.54,
+      "validity_complex": null,
+      "adherence_recall": 0.6666666666666667,
+      "adherence_precision": 1.0,
+      "adherence_f1": 0.8
+    },
+    "2": {
+      "validity_rate": 0.6,
+      "valid_count": 60,
+      "total_count": 100,
+      "validity_simple": 0.6,
+      "validity_complex": null,
+      "adherence_recall": 0.5891472868217054,
+      "adherence_precision": 0.9705882352941176,
+      "adherence_f1": 0.7332261365297471
+    }
+  },
+  "spike_token_shuffled_p00": {
+    "0": {
+      "validity_rate": 0.53,
+      "valid_count": 53,
+      "total_count": 100,
+      "validity_simple": 0.53,
+      "validity_complex": null,
+      "adherence_recall": 0.09496124031007751,
+      "adherence_precision": 0.18461538461538463,
+      "adherence_f1": 0.12541324517436278
+    },
+    "1": {
+      "validity_rate": 0.48,
+      "valid_count": 48,
+      "total_count": 100,
+      "validity_simple": 0.48,
+      "validity_complex": null,
+      "adherence_recall": 0.2112403100775194,
+      "adherence_precision": 0.2926829268292683,
+      "adherence_f1": 0.24538035831535504
+    },
+    "2": {
+      "validity_rate": 0.6,
+      "valid_count": 60,
+      "total_count": 100,
+      "validity_simple": 0.6,
+      "validity_complex": null,
+      "adherence_recall": 0.11046511627906977,
+      "adherence_precision": 0.2578125,
+      "adherence_f1": 0.15466206216082884
+    }
+  },
+  "spike_token_masked_p00": {
+    "0": {
+      "validity_rate": 0.0,
+      "valid_count": 0,
+      "total_count": 100,
+      "validity_simple": 0.0,
+      "validity_complex": null,
+      "adherence_recall": 0.0,
+      "adherence_precision": 0.0,
+      "adherence_f1": 0.0
+    },
+    "1": {
+      "validity_rate": 0.0,
+      "valid_count": 0,
+      "total_count": 100,
+      "validity_simple": 0.0,
+      "validity_complex": null,
+      "adherence_recall": 0.0,
+      "adherence_precision": 0.0,
+      "adherence_f1": 0.0
+    },
+    "2": {
+      "validity_rate": 0.0,
+      "valid_count": 0,
+      "total_count": 100,
+      "validity_simple": 0.0,
+      "validity_complex": null,
+      "adherence_recall": 0.0,
+      "adherence_precision": 0.0,
+      "adherence_f1": 0.0
+    }
+  },
+  "spike_token_correct_p04": {
+    "0": {
+      "validity_rate": 0.6,
+      "valid_count": 60,
+      "total_count": 100,
+      "validity_simple": 0.6,
+      "validity_complex": null,
+      "adherence_recall": 0.6627906976744186,
+      "adherence_precision": 0.9857142857142858,
+      "adherence_f1": 0.7926239419588876
+    },
+    "1": {
+      "validity_rate": 0.56,
+      "valid_count": 56,
+      "total_count": 100,
+      "validity_simple": 0.56,
+      "validity_complex": null,
+      "adherence_recall": 0.6550387596899224,
+      "adherence_precision": 0.9714285714285714,
+      "adherence_f1": 0.782460679512494
+    },
+    "2": {
+      "validity_rate": 0.58,
+      "valid_count": 58,
+      "total_count": 100,
+      "validity_simple": 0.58,
+      "validity_complex": null,
+      "adherence_recall": 0.6550387596899224,
+      "adherence_precision": 0.9444444444444444,
+      "adherence_f1": 0.7735595045772751
+    }
+  },
+  "spike_token_shuffled_p04": {
+    "0": {
+      "validity_rate": 0.58,
+      "valid_count": 58,
+      "total_count": 100,
+      "validity_simple": 0.58,
+      "validity_complex": null,
+      "adherence_recall": 0.20348837209302326,
+      "adherence_precision": 0.4365079365079365,
+      "adherence_f1": 0.277577505407354
+    },
+    "1": {
+      "validity_rate": 0.44,
+      "valid_count": 44,
+      "total_count": 100,
+      "validity_simple": 0.44,
+      "validity_complex": null,
+      "adherence_recall": 0.315891472868217,
+      "adherence_precision": 0.5133333333333333,
+      "adherence_f1": 0.39110654077467194
+    },
+    "2": {
+      "validity_rate": 0.52,
+      "valid_count": 52,
+      "total_count": 100,
+      "validity_simple": 0.52,
+      "validity_complex": null,
+      "adherence_recall": 0.2635658914728682,
+      "adherence_precision": 0.4852941176470588,
+      "adherence_f1": 0.3416045060130917
+    }
+  },
+  "spike_token_masked_p04": {
+    "0": {
+      "validity_rate": 0.8,
+      "valid_count": 80,
+      "total_count": 100,
+      "validity_simple": 0.8,
+      "validity_complex": null,
+      "adherence_recall": 0.17054263565891473,
+      "adherence_precision": 1.0,
+      "adherence_f1": 0.2913907284768212
+    },
+    "1": {
+      "validity_rate": 0.8,
+      "valid_count": 80,
+      "total_count": 100,
+      "validity_simple": 0.8,
+      "validity_complex": null,
+      "adherence_recall": 0.18992248062015502,
+      "adherence_precision": 0.9375,
+      "adherence_f1": 0.3158573270305114
+    },
+    "2": {
+      "validity_rate": 0.8,
+      "valid_count": 80,
+      "total_count": 100,
+      "validity_simple": 0.8,
+      "validity_complex": null,
+      "adherence_recall": 0.1821705426356589,
+      "adherence_precision": 0.8125,
+      "adherence_f1": 0.29761324890404284
+    }
+  },
+  "spike_text_correct_p00": {
+    "0": {
+      "validity_rate": 0.68,
+      "valid_count": 68,
+      "total_count": 100,
+      "validity_simple": 0.68,
+      "validity_complex": null,
+      "adherence_recall": 0.7131782945736432,
+      "adherence_precision": 1.0,
+      "adherence_f1": 0.8325791855203618
+    },
+    "1": {
+      "validity_rate": 0.84,
+      "valid_count": 84,
+      "total_count": 100,
+      "validity_simple": 0.84,
+      "validity_complex": null,
+      "adherence_recall": 0.6666666666666667,
+      "adherence_precision": 1.0,
+      "adherence_f1": 0.8
+    },
+    "2": {
+      "validity_rate": 0.86,
+      "valid_count": 86,
+      "total_count": 100,
+      "validity_simple": 0.86,
+      "validity_complex": null,
+      "adherence_recall": 0.6511627906976745,
+      "adherence_precision": 1.0,
+      "adherence_f1": 0.7887323943661972
+    }
+  },
+  "spike_text_shuffled_p00": {
+    "0": {
+      "validity_rate": 0.71,
+      "valid_count": 71,
+      "total_count": 100,
+      "validity_simple": 0.71,
+      "validity_complex": null,
+      "adherence_recall": 0.12984496124031006,
+      "adherence_precision": 0.19718309859154928,
+      "adherence_f1": 0.15658125365161504
+    },
+    "1": {
+      "validity_rate": 0.8,
+      "valid_count": 80,
+      "total_count": 100,
+      "validity_simple": 0.8,
+      "validity_complex": null,
+      "adherence_recall": 0.2054263565891473,
+      "adherence_precision": 0.29878048780487804,
+      "adherence_f1": 0.24346114183931752
+    },
+    "2": {
+      "validity_rate": 0.88,
+      "valid_count": 88,
+      "total_count": 100,
+      "validity_simple": 0.88,
+      "validity_complex": null,
+      "adherence_recall": 0.11240310077519379,
+      "adherence_precision": 0.2357142857142857,
+      "adherence_f1": 0.1522188643232066
+    }
+  },
+  "spike_text_masked_p00": {
+    "0": {
+      "validity_rate": 0.0,
+      "valid_count": 0,
+      "total_count": 100,
+      "validity_simple": 0.0,
+      "validity_complex": null,
+      "adherence_recall": 0.0,
+      "adherence_precision": 0.0,
+      "adherence_f1": 0.0
+    },
+    "1": {
+      "validity_rate": 0.96,
+      "valid_count": 96,
+      "total_count": 100,
+      "validity_simple": 0.96,
+      "validity_complex": null,
+      "adherence_recall": 0.0,
+      "adherence_precision": 0.0,
+      "adherence_f1": 0.0
+    },
+    "2": {
+      "validity_rate": 1.0,
+      "valid_count": 100,
+      "total_count": 100,
+      "validity_simple": 1.0,
+      "validity_complex": null,
+      "adherence_recall": 0.0,
+      "adherence_precision": 0.0,
+      "adherence_f1": 0.0
+    }
+  },
+  "spike_text_correct_p04": {
+    "0": {
+      "validity_rate": 0.6,
+      "valid_count": 60,
+      "total_count": 100,
+      "validity_simple": 0.6,
+      "validity_complex": null,
+      "adherence_recall": 0.6899224806201549,
+      "adherence_precision": 1.0,
+      "adherence_f1": 0.8165137614678898
+    },
+    "1": {
+      "validity_rate": 0.74,
+      "valid_count": 74,
+      "total_count": 100,
+      "validity_simple": 0.74,
+      "validity_complex": null,
+      "adherence_recall": 0.6899224806201549,
+      "adherence_precision": 1.0,
+      "adherence_f1": 0.8165137614678898
+    },
+    "2": {
+      "validity_rate": 0.72,
+      "valid_count": 72,
+      "total_count": 100,
+      "validity_simple": 0.72,
+      "validity_complex": null,
+      "adherence_recall": 0.6782945736434107,
+      "adherence_precision": 1.0,
+      "adherence_f1": 0.8083140877598152
+    }
+  },
+  "spike_text_shuffled_p04": {
+    "0": {
+      "validity_rate": 0.65,
+      "valid_count": 65,
+      "total_count": 100,
+      "validity_simple": 0.65,
+      "validity_complex": null,
+      "adherence_recall": 0.27906976744186046,
+      "adherence_precision": 0.43333333333333335,
+      "adherence_f1": 0.3394994559303591
+    },
+    "1": {
+      "validity_rate": 0.7,
+      "valid_count": 70,
+      "total_count": 100,
+      "validity_simple": 0.7,
+      "validity_complex": null,
+      "adherence_recall": 0.32364341085271325,
+      "adherence_precision": 0.4437751004016064,
+      "adherence_f1": 0.3743065486151256
+    },
+    "2": {
+      "validity_rate": 0.66,
+      "valid_count": 66,
+      "total_count": 100,
+      "validity_simple": 0.66,
+      "validity_complex": null,
+      "adherence_recall": 0.29844961240310075,
+      "adherence_precision": 0.46710526315789475,
+      "adherence_f1": 0.3641995869695556
+    }
+  },
+  "spike_text_masked_p04": {
+    "0": {
+      "validity_rate": 0.8,
+      "valid_count": 80,
+      "total_count": 100,
+      "validity_simple": 0.8,
+      "validity_complex": null,
+      "adherence_recall": 0.23643410852713176,
+      "adherence_precision": 0.9411764705882353,
+      "adherence_f1": 0.3779283639883833
+    },
+    "1": {
+      "validity_rate": 0.82,
+      "valid_count": 82,
+      "total_count": 100,
+      "validity_simple": 0.82,
+      "validity_complex": null,
+      "adherence_recall": 0.1627906976744186,
+      "adherence_precision": 0.7222222222222222,
+      "adherence_f1": 0.2656934306569343
+    },
+    "2": {
+      "validity_rate": 0.78,
+      "valid_count": 78,
+      "total_count": 100,
+      "validity_simple": 0.78,
+      "validity_complex": null,
+      "adherence_recall": 0.20155038759689922,
+      "adherence_precision": 0.8888888888888888,
+      "adherence_f1": 0.3285939968404424
+    }
+  },
+  "spike_baseline_p00": {
+    "0": {
+      "validity_rate": 0.0,
+      "valid_count": 0,
+      "total_count": 100,
+      "validity_simple": 0.0,
+      "validity_complex": null,
+      "adherence_recall": 0.0,
+      "adherence_precision": 0.0,
+      "adherence_f1": 0.0
+    },
+    "1": {
+      "validity_rate": 0.0,
+      "valid_count": 0,
+      "total_count": 100,
+      "validity_simple": 0.0,
+      "validity_complex": null,
+      "adherence_recall": 0.0,
+      "adherence_precision": 0.0,
+      "adherence_f1": 0.0
+    },
+    "2": {
+      "validity_rate": 0.0,
+      "valid_count": 0,
+      "total_count": 100,
+      "validity_simple": 0.0,
+      "validity_complex": null,
+      "adherence_recall": 0.0,
+      "adherence_precision": 0.0,
+      "adherence_f1": 0.0
+    }
+  },
+  "spike_baseline_p04": {
+    "0": {
+      "validity_rate": 0.5,
+      "valid_count": 50,
+      "total_count": 100,
+      "validity_simple": 0.5,
+      "validity_complex": null,
+      "adherence_recall": 0.4457364341085271,
+      "adherence_precision": 0.5652173913043478,
+      "adherence_f1": 0.4984164027337889
+    },
+    "1": {
+      "validity_rate": 0.58,
+      "valid_count": 58,
+      "total_count": 100,
+      "validity_simple": 0.58,
+      "validity_complex": null,
+      "adherence_recall": 0.45736434108527135,
+      "adherence_precision": 0.5833333333333334,
+      "adherence_f1": 0.5127250155183116
+    },
+    "2": {
+      "validity_rate": 0.66,
+      "valid_count": 66,
+      "total_count": 100,
+      "validity_simple": 0.66,
+      "validity_complex": null,
+      "adherence_recall": 0.44961240310077527,
+      "adherence_precision": 0.5531914893617021,
+      "adherence_f1": 0.49605263157894747
+    }
+  }
+}

@@ -1,0 +1,195 @@
+{
+ "n76": 76,
+ "n_profiles": 6,
+ "repro": {
+  "M_correct_mean": 0.5570175438596491,
+  "M_shuffled_mean": 0.3048245614035088,
+  "ok": true
+ },
+ "competence_gate": {
+  "R_correct_per_seed": [
+   0.35526315789473684,
+   0.40789473684210525,
+   0.35526315789473684
+  ],
+  "R_shuffled_per_seed": [
+   0.3618421052631579,
+   0.4144736842105263,
+   0.4144736842105263
+  ],
+  "R_correct_mean": 0.37280701754385964,
+  "R_shuffled_mean": 0.3969298245614035,
+  "R_exec_rate": 0.5350877192982456,
+  "baseline_p04_exec_rate": 0.5526315789473685,
+  "floor": 0.3,
+  "n_R_correct>=floor": 3,
+  "n_R_shuffled>=floor": 3,
+  "PASS": true
+ },
+ "test_D": {
+  "per_seed": {
+   "0": {
+    "n": 76,
+    "nonzero_pairs": 26,
+    "mean_diff": 0.19078947368421054,
+    "drop_M_mean": 0.18421052631578946,
+    "drop_R_mean": -0.006578947368421052,
+    "p_greater": 0.004167097495843967,
+    "p_less": 0.995832902504156
+   },
+   "1": {
+    "n": 76,
+    "nonzero_pairs": 26,
+    "mean_diff": 0.29605263157894735,
+    "drop_M_mean": 0.2894736842105263,
+    "drop_R_mean": -0.006578947368421052,
+    "p_greater": 6.748780166313842e-06,
+    "p_less": 0.9999932512198337
+   },
+   "2": {
+    "n": 76,
+    "nonzero_pairs": 32,
+    "mean_diff": 0.34210526315789475,
+    "drop_M_mean": 0.28289473684210525,
+    "drop_R_mean": -0.05921052631578947,
+    "p_greater": 3.5815109209776308e-06,
+    "p_less": 0.999996418489079
+   }
+  },
+  "n_direction>0": 3,
+  "n_significant": 3,
+  "reverse_veto_seeds": [],
+  "underpowered_seeds": [],
+  "guard_a_exec_intersection_mean": 0.39080459770114945,
+  "guard_b_profile_effect": 0.3096590909090909,
+  "guard_b_detail": [
+   {
+    "profile": [
+     "<CIRCLE>"
+    ],
+    "effect": 0.0
+   },
+   {
+    "profile": [
+     "<CIRCLE>",
+     "<THIN>"
+    ],
+    "effect": 0.009259259259259264
+   },
+   {
+    "profile": [
+     "<NGON>"
+    ],
+    "effect": 0.5454545454545454
+   },
+   {
+    "profile": [
+     "<NGON>",
+     "<THIN>"
+    ],
+    "effect": 0.0625
+   },
+   {
+    "profile": [
+     "<TALL>"
+    ],
+    "effect": 1.0
+   },
+   {
+    "profile": [
+     "<THIN>"
+    ],
+    "effect": 0.24074074074074073
+   }
+  ],
+  "PASS": true
+ },
+ "M1_content": {
+  "R_correct_vs_R_shuffled": {
+   "0": {
+    "mean": -0.006578947368421052,
+    "p_less": 0.15865525393145707
+   },
+   "1": {
+    "mean": -0.006578947368421052,
+    "p_less": 0.5830801888302763
+   },
+   "2": {
+    "mean": -0.05921052631578947,
+    "p_less": 0.01268034593458672
+   }
+  },
+  "note": "content-blindness evidence: expect ~0 (R ignores header content)"
+ },
+ "M1_presence": {
+  "R_correct_vs_R_masked": {
+   "0": {
+    "mean": 0.0,
+    "p_less": NaN
+   },
+   "1": {
+    "mean": 0.06578947368421052,
+    "p_less": 0.9420047341349924
+   },
+   "2": {
+    "mean": -0.05263157894736842,
+    "p_less": 0.022750131948179195
+   }
+  },
+  "note": "PRESENCE contrast, NOT content evidence (per finding #7)"
+ },
+ "M2_headeronly": {
+  "R_correct_p00_mean": 0.18421052631578946,
+  "baseline_p00_mean": 0.0,
+  "M_correct_p00_ref": 0.776,
+  "note": "descriptive: R can't generate from header alone if it ignores headers"
+ },
+ "F4b_dose": {
+  "means": {
+   "correct": 0.5570175438596491,
+   "corrupted": 0.3925438596491228,
+   "shuffled": 0.3048245614035088,
+   "random": 0.21929824561403508
+  },
+  "correct>corrupted": {
+   "n_seed_hi>lo": 2,
+   "per_seed": {
+    "0": {
+     "mean": 0.09210526315789473,
+     "p": 0.09086154420059728
+    },
+    "1": {
+     "mean": 0.21052631578947367,
+     "p": 0.00026100383671439844
+    },
+    "2": {
+     "mean": 0.19078947368421054,
+     "p": 0.0010216963790714237
+    }
+   }
+  },
+  "corrupted>shuffled": {
+   "n_seed_hi>lo": 1,
+   "per_seed": {
+    "0": {
+     "mean": 0.09210526315789473,
+     "p": 0.07400079169546141
+    },
+    "1": {
+     "mean": 0.07894736842105263,
+     "p": 0.0563535820708293
+    },
+    "2": {
+     "mean": 0.09210526315789473,
+     "p": 0.03840558437964261
+    }
+   }
+  },
+  "monotone_confirmed": false,
+  "M_random_vs_M_shuffled_mean_diff": -0.0855263157894737,
+  "note": "SUPPORTING/exploratory. M_random is NON-EVIDENTIAL. non-monotone = not-confirmed (no spin)."
+ },
+ "RULING": "DISSOCIATION_semantic",
+ "headline": "strong: wrong DESIGN-INTENT hurts (distribution-shift excluded)",
+ "repro_ok": true
+}
