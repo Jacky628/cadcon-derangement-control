@@ -29,7 +29,11 @@ plt.rcParams.update({'pdf.fonttype': 42, 'ps.fonttype': 42,
                      'font.family': 'Inter', 'mathtext.fontset': 'stixsans',
                      'figure.dpi': 300, 'savefig.dpi': 300})
 
-fig = plt.figure(figsize=(5.6, 4.1))
+# Height compressed from 4.1in so the full-width figure with its full caption fits
+# above section 3.1 rather than floating past it. Font sizes are in points and do
+# not scale with the canvas, so only the layout tightens; the coordinates below
+# were re-spaced where that tightening would have collided.
+fig = plt.figure(figsize=(5.6, 3.2))
 axA = fig.add_axes([0.0, 0.50, 1.0, 0.48]); axA.axis('off')
 axB = fig.add_axes([0.0, -0.03, 1.0, 0.49]); axB.axis('off')
 for ax in (axA, axB):
@@ -53,46 +57,46 @@ axA.text(1, 99, 'A', fontsize=10, fontweight='bold', color=INK, va='top')
 axA.text(6.5, 99, 'CADCON: header construction (training)  vs.  independent scoring (evaluation)',
          fontsize=7.6, fontweight='semibold', color=SUB, va='top')
 
-axA.add_patch(Rectangle((1, 50), 98, 36, fc=LANE_O, ec='none', zorder=0))
-axA.add_patch(Rectangle((1, 4), 98, 36, fc=LANE_B, ec='none', zorder=0))
-axA.text(2.8, 82.5, 'HEADER CONSTRUCTION', fontsize=6.0, color=ORANGE_D,
+axA.add_patch(Rectangle((1, 54), 98, 32, fc=LANE_O, ec='none', zorder=0))
+axA.add_patch(Rectangle((1, 4), 98, 32, fc=LANE_B, ec='none', zorder=0))
+axA.text(2.8, 83.5, 'HEADER CONSTRUCTION', fontsize=6.0, color=ORANGE_D,
          ha='left', va='center', fontweight='semibold', style='italic')
-axA.text(2.8, 36.5, 'GENERATION & SCORING', fontsize=6.0, color=BLUE_D,
+axA.text(2.8, 33.5, 'GENERATION & SCORING', fontsize=6.0, color=BLUE_D,
          ha='left', va='center', fontweight='semibold', style='italic')
 
 # top lane boxes (y 54-76)
-box(axA, 3, 54, 16, 22, 'DeepCAD\nJSON history', ec='#c9c9c9')
-arrow(axA, 19.6, 65, 24.4, 65)
-axA.text(22, 51.2, 'transpile', fontsize=5.8, color=MUT, ha='center')
-box(axA, 25, 54, 17, 22, 'CadQuery\nprogram $P$', ec='#c9c9c9')
-arrow(axA, 42.6, 65, 47.4, 65)
-axA.text(45, 51.2, 'regex $\\phi$', fontsize=6.0, color=ORANGE_D, ha='center', fontweight='bold')
-box(axA, 48, 54, 17, 22, 'intent $\\mathcal{I}$\n5 features', ec=ORANGE)
-arrow(axA, 65.6, 65, 70.4, 65)
-box(axA, 71, 54, 27, 22, '<CONSTRAINTS><CIRCLE>..\n# design intent: circle',
+box(axA, 3, 58, 16, 20, 'DeepCAD\nJSON history', ec='#c9c9c9')
+arrow(axA, 19.6, 68, 24.4, 68)
+axA.text(22, 52.4, 'transpile', fontsize=5.8, color=MUT, ha='center')
+box(axA, 25, 58, 17, 20, 'CadQuery\nprogram $P$', ec='#c9c9c9')
+arrow(axA, 42.6, 68, 47.4, 68)
+axA.text(45, 52.4, 'regex $\\phi$', fontsize=6.0, color=ORANGE_D, ha='center', fontweight='bold')
+box(axA, 48, 58, 17, 20, 'intent $\\mathcal{I}$\n5 features', ec=ORANGE)
+arrow(axA, 65.6, 68, 70.4, 68)
+box(axA, 71, 58, 27, 20, '<CONSTRAINTS><CIRCLE>..\n# design intent: circle',
     ec=ORANGE, fs=5.5, mono=True, tc=SUB)
-axA.text(84.5, 79, 'header $h(\\mathcal{I})$', fontsize=6.2, color=ORANGE_D, ha='center')
+axA.text(84.5, 82.5, 'header $h(\\mathcal{I})$', fontsize=6.2, color=ORANGE_D, ha='center')
 
 # bottom lane boxes (y 9-31)
-box(axA, 3, 9, 22, 22, 'LoRA fine-tune M\non  $h(\\mathcal{I})+P$', ec=BLUE)
-arrow(axA, 25.6, 20, 30.4, 20)
-box(axA, 31, 9, 17, 22, 'completion\n(greedy)', ec=BLUE)
-arrow(axA, 48.6, 20, 53.4, 20)
-axA.text(51, 6.0, 'execute', fontsize=5.8, color=MUT, ha='center')
-box(axA, 54, 9, 14, 22, 'B-rep\nsolid', ec='#c9c9c9')
-arrow(axA, 68.6, 20, 73.4, 20)
-box(axA, 74, 9, 24, 22, 'geometric assertions\nno code shared with $\\phi$', ec=GREEN, fs=6.4)
+box(axA, 3, 8, 22, 20, 'LoRA fine-tune M\non  $h(\\mathcal{I})+P$', ec=BLUE)
+arrow(axA, 25.6, 18, 30.4, 18)
+box(axA, 31, 8, 17, 20, 'completion\n(greedy)', ec=BLUE)
+arrow(axA, 48.6, 18, 53.4, 18)
+axA.text(51, 1.6, 'execute', fontsize=5.8, color=MUT, ha='center')
+box(axA, 54, 8, 14, 20, 'B-rep\nsolid', ec='#c9c9c9')
+arrow(axA, 68.6, 18, 73.4, 18)
+box(axA, 74, 8, 24, 20, 'geometric assertions\nno code shared with $\\phi$', ec=GREEN, fs=6.4)
 
 # cross-lane edges — elbow routed through empty space, labels clear of paths
 # training edge: out of CadQuery's LEFT side, elbow down into LoRA's top
-axA.plot([33.5, 33.5, 23], [53.2, 46.5, 46.5], color='#a0a0a0', lw=1.1,
+axA.plot([33.5, 33.5, 23], [57.2, 44.5, 44.5], color='#a0a0a0', lw=1.1,
          solid_joinstyle='miter', zorder=1)
-arrow(axA, 23, 46.5, 23, 32.7)
-axA.text(35.5, 47.6, '$h(\\mathcal{I})+P$  (training pair)', fontsize=5.6, color=MUT, ha='left')
-axA.text(35.5, 43.0, 'eval: {0, 40}% prefix', fontsize=5.6, color=MUT, ha='left')
+arrow(axA, 23, 44.5, 23, 29.0)
+axA.text(35.5, 45.5, '$h(\\mathcal{I})+P$  (training pair)', fontsize=5.6, color=MUT, ha='left')
+axA.text(35.5, 38.5, 'eval: {0, 40}% prefix', fontsize=5.6, color=MUT, ha='left')
 # target edge: dashed orange, label to its left
-arrow(axA, 84.5, 52.5, 85.5, 33.5, color=ORANGE, lw=1.0, ls=(0, (3.5, 2.5)))
-axA.text(82.5, 43, 'target only:\n$\\phi(GT)$', fontsize=5.6, color=ORANGE_D,
+arrow(axA, 84.5, 56.5, 85.5, 29.5, color=ORANGE, lw=1.0, ls=(0, (3.5, 2.5)))
+axA.text(82.5, 42.5, 'target only:\n$\\phi(GT)$', fontsize=5.6, color=ORANGE_D,
          ha='right', linespacing=1.4)
 
 # ================= Panel B =================
@@ -119,15 +123,15 @@ for i in range(2):
                                      boxstyle='round,pad=0.3,rounding_size=1.2',
                                      fc=fc, ec=ec, lw=0.9 if live else 0.6,
                                      ls='-' if live else (0, (2.2, 1.8)), zorder=2))
-axB.text(x0 + 1.5 * cw - 0.9, y0 - 6.0, r'$\times$ {token, text}  $\times$ 3 seeds   +   unconditioned baseline',
+axB.text(x0 + 1.5 * cw - 0.9, y0 - 7.5, r'$\times$ {token, text}  $\times$ 3 seeds   +   unconditioned baseline',
          fontsize=6.0, ha='center', color=MUT)
-axB.text(x0 + 1.5 * cw - 0.9, y0 - 12.0,
+axB.text(x0 + 1.5 * cw - 0.9, y0 - 14.0,
          'every claim in this paper: 400 deduplicated programs, 11 intent profiles',
          fontsize=6.0, ha='center', color=BLUE_D, fontweight='medium')
 axB.text(x0 + 1.5 * cw - 0.9, y0 + 2 * chh + 13.5, 'header arms (M)', fontsize=7.0,
          ha='center', color=INK, fontweight='semibold')
 # 0% 行的地位标注：放在矩阵下方注解区，避开右侧控制图的版面
-axB.text(x0 + 1.5 * cw - 0.9, y0 - 17.5,
+axB.text(x0 + 1.5 * cw - 0.9, y0 - 20.5,
          '0% row: initial evaluation only — $\\leq$19 distinct prompts regardless of sample size (§4.5)',
          fontsize=5.6, ha='center', color='#9a9a9a', style='italic')
 
@@ -135,14 +139,14 @@ axB.text(x0 + 1.5 * cw - 0.9, y0 - 17.5,
 bx = 62
 box(axB, bx, 60, 15, 21, 'M\ntrue pairs\n$(h(\\mathcal{I}_i),\\,P_i)$', ec=BLUE, fs=6.2)
 box(axB, bx, 20, 15, 21, 'R\nderanged pairs\n$(h(\\mathcal{I}_j),\\,P_i)$', ec=GREEN, fs=6.2)
-axB.text(bx + 7.5, 50.5, 'same marginal,\ncorrelation destroyed', fontsize=5.8,
+axB.text(bx + 7.5, 47.5, 'same marginal,\ncorrelation destroyed', fontsize=5.8,
          ha='center', color=MUT, style='italic', linespacing=1.35)
 arrow(axB, bx + 15.6, 68, bx + 21.5, 56)
 arrow(axB, bx + 15.6, 33, bx + 21.5, 45)
 box(axB, bx + 21, 40, 14, 21, 'Test D\ninteraction\n$\\Delta_M-\\Delta_R$', ec=ORANGE, fs=6.2)
-axB.text(bx + 18, 13.0, 'harm requires the learned header$\\,\\rightarrow\\,$program mapping?',
+axB.text(bx + 18, 10.0, 'harm requires the learned header$\\,\\rightarrow\\,$program mapping?',
          fontsize=6.0, ha='center', color=SUB, style='italic')
-axB.text(bx + 18, 4.0, 'same 400 programs, same indices,\nbyte-identical wrong headers',
+axB.text(bx + 18, -3.0, 'same 400 programs, same indices,\nbyte-identical wrong headers',
          fontsize=5.6, ha='center', color=BLUE_D, linespacing=1.35)
 
 fig.savefig(HERE / 'fig1_method_v4.png', bbox_inches='tight', pad_inches=0.02)
