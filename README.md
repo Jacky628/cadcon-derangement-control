@@ -8,6 +8,10 @@ artifact of scoring generated text without requiring it to execute.
 Conditioning in CAD Program Completion* — Yang Xiao, Sichuan University
 (`yangx64519@gmail.com`), [arXiv:2607.23191](https://arxiv.org/abs/2607.23191).
 
+The identifier currently serves v2, whose title carries a "Can Be" hedge and whose section
+numbering differs from the references used below; the v3 replacement quoted here is prepared
+but not yet posted.
+
 Contents: four pre-registration documents, the frozen held-out lists and decision rules, the
 complete raw per-sample geometry scores for every arm and seed of every evaluation, the frozen
 analysis scripts with their hash manifests, and the figure and table scripts.
@@ -35,7 +39,11 @@ profiles against six) and in generation-truncation regime, so **their absolute l
 commensurable and are never pooled or placed on a common scale**. Files are named for their
 campaign throughout; anything without a `repl`/`testd` prefix belongs to the initial one.
 
-## Every reported number is recomputable from this release
+## What is recomputable from this release
+
+Every pre-registered decision, and the figure and table values behind them, are recomputable
+from this repository alone; four descriptive tables are not. Both halves are listed below,
+because a release that overstates its own coverage is worse than one that bounds it.
 
 Verified by running the scripts below against nothing but this repository:
 
@@ -44,11 +52,19 @@ Verified by running the scripts below against nothing but this repository:
 | `analysis/replication_analysis.py` | `REPLICATED` | the primary verdict, §4.1 |
 | `analysis/testd_analysis.py` | `DISSOCIATION_SEMANTIC` | the causal verdict, §4.2 |
 | `analysis/blinded_power_check.py` | non-zero counts only | the blinded check, §3.6 |
-| `figures/compute_replication_figures.py` | `replication_figures_data.json` | Figures 2–4 and the replication tables |
+| `figures/compute_replication_figures.py` | `replication_figures_data.json` | the replication campaign's figure and table values |
 | `figures/compute_all.py` | 105/105 PASS | the initial campaign's entry-level statistics |
 | `analysis/submission_audit.py` | assertions pass | the duplicate-aware re-analysis of the initial campaign |
 
 The first four were each checked against their frozen outputs and agree value for value.
+
+**Not reproducible from the release**, and stated here rather than left for a reader to
+discover: Appendix B's Table 10 (the five treatments of the tie-heavy difference distribution)
+and Table 11 (the diff-mass decomposition) have no producing script here, and of Table 12's
+four leave-one-*feature*-out rows only `all CIRCLE-containing` is in
+`data/testd_sensitivity.json` — the other three were computed with the same frozen mechanics
+but the script that produced them is not part of this release. The eleven leave-one-*profile*-out
+rows of Table 12, which carry the pre-registered guardrail, are reproducible.
 
 ## Layout
 
@@ -68,15 +84,16 @@ analysis/           Frozen analysis code and evaluation manifests
   replication_analysis.py     frozen primary decision rules on the 400-program sample
   testd_analysis.py           frozen retest of the control on that same sample
   blinded_power_check.py      counts non-zero pairs; contains no mean, direction or Wilcoxon path
-  testd_sensitivity.py        five treatments of the tie-heavy difference distribution (App. B)
+  testd_sensitivity.py        leave-one-profile-out, the executable-only view and profile
+                              weighting (App. B). It does NOT compute Table 10's five
+                              zero-handling treatments; nothing here does.
   replication_frozen_lists.json  the 400 deduplicated programs, eleven four-tag profile
                               definitions, per-profile stratification quotas
   repl_p04.json               the 21 replication evaluation jobs
   replD_jobs.json             the 6 control-retest jobs
   make_testd_jobs.py          builds replD_jobs.json from the frozen sample
-  verify_*.py                 the pre-launch checks tabulated in Appendix A
-  regress_after_0806.py       post-fix regression of the evaluation path
-  bench/                      the batch-invariance measurements cited in §3.6
+  bench/                      outputs of the batch-invariance measurements cited in §3.6
+                              (the measurement scripts need the harness; see below)
 
   geom_requirements.py        execution-level geometric assertions (the independent metric),
                               byte-identical across both campaigns
@@ -108,14 +125,16 @@ data/               Complete raw per-sample geometry scores
   repl_results/blinded_power_check.json  output of the blinded check, produced before any
                               effect direction or p-value was computed
   spike_verdict.json, f4_verdict.json, repl_verdict.json, testd_verdict.json
-  testd_sensitivity.json      zero-handling robustness (Appendix B)
+  testd_sensitivity.json      output of the above: Test D robustness decompositions (App. B)
   f4_meta_seed{0,1,2}.json    control-training metadata (derangement plan, 0 header-dropout)
   sha256s_raw.txt             manifest of the initial campaign's data snapshot
 
 figures/
   compute_all.py              recomputes the initial campaign and asserts 105 values
   compute_replication_figures.py   recomputes the replication campaign's figure/table data
-  make_fig1_v4.py, make_replication_figures.py     current figure scripts (paper Figures 1–4)
+  make_fig1_v4.py, make_replication_figures.py     current figure scripts (paper Figures 1-4;
+                              make_replication_figures.py keeps the earlier round's stems and
+                              numbering — see the correspondence below)
   make_fig1.py, make_figures.py, fig_style.py      the initial campaign's figure scripts
   figures_data.json, replication_figures_data.json  outputs of the two compute scripts
   verification_report.txt     the 105 PASS lines
@@ -148,30 +167,65 @@ reproduced on exactly those versions.
     --dir data/testd_analysis_input --frozen analysis/replication_frozen_lists.json \
     --repl-verdict repl_verdict.json --out testd_verdict.json   # -> DISSOCIATION_SEMANTIC
 
-# figure and table data
-.venv/bin/python figures/compute_replication_figures.py \
-    --repl-dir data/repl_results --testd-dir data/testd_analysis_input
+# figure and table data, then the figures themselves
+cd figures
+../.venv/bin/python compute_replication_figures.py    # -> replication_figures_data.json
+../.venv/bin/python make_replication_figures.py       # -> paper Figures 2-4, written under
+                                                      #    the earlier round's file stems
+../.venv/bin/python make_fig1_v4.py                   # -> Figure 1
+cd ..
 
 # --- initial campaign ---
-cd figures && ../.venv/bin/python compute_all.py     # -> 105/105 PASS
+cd figures && ../.venv/bin/python compute_all.py      # -> 105/105 PASS
 cd ../analysis && ../.venv/bin/python submission_audit.py
 ```
 
 ## What is not in this release, and why
 
 - **The training and evaluation harness** (`main.py`, `run_dualgpu.py`, the DeepCAD
-  transpiler). These appear in the hash manifests, so the code that produced the data is
-  identified and verifiable by hash, but the harness itself is not distributed here. What is
-  released is everything needed to recompute the reported numbers from the raw per-sample
-  scores.
-- **The materialised 400-program dataset.** The programs are identified in
-  `replication_frozen_lists.json`, which carries the sample identities, the profile
-  definitions and the draw quotas.
-- **Throughput benchmarks and smoke tests**, which support no reported number.
+  transpiler) and **the materialised 400-program dataset**. These appear in the hash
+  manifests, so the code and data that produced the results are identified and verifiable by
+  hash, but they are not distributed here. What is released is everything needed to recompute
+  the reported numbers from the raw per-sample scores.
+- **The pre-launch verification scripts** tabulated in Appendix A, the post-fix regression
+  check, and the two batch-invariance measurement scripts. Each of them reads the live sandbox
+  or loads a fine-tuned checkpoint, so none can run against this release; shipping them would
+  present as reproducible something that is not. Their *outputs* are here — `analysis/bench/`
+  holds the batch-invariance measurements the paper cites — and Appendix A states what each
+  check returned.
 - **LoRA adapter checkpoints** for all reported conditions, which will be released upon
   acceptance.
 
-One manifest entry is superseded rather than stale: `make_fig1_v4.py` was redrawn after the
-freeze (layout, and a font-embedding fix for arXiv), so its hash in `replication_frozen/
-sha256s.txt` records the pre-redraw version. The script in this repository is the one that
-produced Figure 1 as published. Every other entry covering a released file verifies.
+## Released copies that differ from their frozen hash
+
+`replication_frozen/sha256s.txt` records the code as it stood at launch. Three of its entries
+cover files whose copy here is not byte-identical, and it is worth being exact about why:
+
+| File | Difference |
+|---|---|
+| `figures/make_fig1_v4.py` | Redrawn after the freeze — layout, and a font-embedding fix required by arXiv. The copy here is the one that produced Figure 1 as published. |
+| `figures/compute_replication_figures.py` | Four path bindings, marked in the source, point at `analysis/` and `data/` instead of a flat directory. The computation is untouched. |
+| `figures/make_replication_figures.py` | Three path bindings, marked in the source, replace an absolute sandbox path. The plotting code is untouched. |
+
+`make_replication_figures.py` writes the three panels under the stems the earlier round used,
+which are not the names or the numbers the paper carries. The contents match; only the labels
+differ:
+
+| stem written by the script, here | number in the paper | stem used in the paper's own tree |
+|---|---|---|
+| `fig3_dissociation_repl` | Figure 2 | `fig2_dissociation_v4` |
+| `fig4_output_identity_repl` | Figure 3 | `fig3_output_identity_v4` |
+| `fig2_seven_arms_repl` | Figure 4 | `fig4_metric_comparison_v4` |
+
+Checked by rendering both at 110 dpi and comparing: same data, same labels, same values, with
+only sub-pixel layout differences. `make_fig1_v4.py` writes Figure 1 under its own name.
+This repository ships the figure *scripts*, not the figure files; the third column names the
+stems the typeset paper uses, so that a reader who runs the scripts can tell which output is
+which.
+
+Every other manifest entry covering a released file verifies: 26 of 26.
+
+The `code_sha256` field embedded inside `analysis/replication_frozen_lists.json` is a separate
+matter — it is a stale snapshot taken at sampling time, superseded by
+`replication_frozen/sha256s.txt`, and the frozen list was deliberately not edited because
+editing it would invalidate its own hash. Appendix A records this.
