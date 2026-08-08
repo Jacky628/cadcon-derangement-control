@@ -1,0 +1,63 @@
+{
+ "n": 64,
+ "n_scorable": 64,
+ "prefix": 0.4,
+ "ref": "8_runA",
+ "per_run": {
+  "8_runA": {
+   "mean_gated_recall": 0.3671875,
+   "mean_raw_recall": 0.875,
+   "validity": 0.46875
+  },
+  "8_runB": {
+   "mean_gated_recall": 0.3671875,
+   "mean_raw_recall": 0.875,
+   "validity": 0.46875
+  },
+  "16": {
+   "mean_gated_recall": 0.34375,
+   "mean_raw_recall": 0.8671875,
+   "validity": 0.4375
+  },
+  "32": {
+   "mean_gated_recall": 0.375,
+   "mean_raw_recall": 0.8671875,
+   "validity": 0.46875
+  }
+ },
+ "vs_ref": {
+  "8_runA_vs_8_runB": {
+   "identical_programs": 64,
+   "identical_primary_score": 64,
+   "mean_shift": 0.0,
+   "mean_abs_shift": 0.0,
+   "max_abs_shift": 0.0,
+   "validity_shift": 0.0
+  },
+  "8_runA_vs_16": {
+   "identical_programs": 56,
+   "identical_primary_score": 62,
+   "mean_shift": -0.0234375,
+   "mean_abs_shift": 0.0234375,
+   "max_abs_shift": 1.0,
+   "validity_shift": -0.03125
+  },
+  "8_runA_vs_32": {
+   "identical_programs": 50,
+   "identical_primary_score": 62,
+   "mean_shift": 0.0078125,
+   "mean_abs_shift": 0.0234375,
+   "max_abs_shift": 1.0,
+   "validity_shift": 0.0
+  }
+ },
+ "same_batch_control": {
+  "runs": [
+   "8_runA",
+   "8_runB"
+  ],
+  "mean_shift": 0.0,
+  "identical_scores": 64,
+  "n": 64
+ }
+}

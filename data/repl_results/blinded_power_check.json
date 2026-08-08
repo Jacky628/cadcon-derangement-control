@@ -1,0 +1,96 @@
+{
+ "n": 400,
+ "threshold": 60,
+ "prefix": "p04",
+ "rule": "trigger if >=2 of 3 seeds fall below the threshold in EITHER mode of the decision cell",
+ "decision_cells": {
+  "shuffled": {
+   "token": {
+    "per_seed": {
+     "0": {
+      "n_pairs": 400,
+      "nonzero": 123,
+      "below_threshold": false
+     },
+     "1": {
+      "n_pairs": 400,
+      "nonzero": 116,
+      "below_threshold": false
+     },
+     "2": {
+      "n_pairs": 400,
+      "nonzero": 126,
+      "below_threshold": false
+     }
+    },
+    "n_seeds_below_threshold": 0
+   },
+   "text": {
+    "per_seed": {
+     "0": {
+      "n_pairs": 400,
+      "nonzero": 123,
+      "below_threshold": false
+     },
+     "1": {
+      "n_pairs": 400,
+      "nonzero": 113,
+      "below_threshold": false
+     },
+     "2": {
+      "n_pairs": 400,
+      "nonzero": 126,
+      "below_threshold": false
+     }
+    },
+    "n_seeds_below_threshold": 0
+   }
+  }
+ },
+ "report_only_cells": {
+  "masked": {
+   "token": {
+    "per_seed": {
+     "0": {
+      "n_pairs": 400,
+      "nonzero": 121,
+      "below_threshold": false
+     },
+     "1": {
+      "n_pairs": 400,
+      "nonzero": 130,
+      "below_threshold": false
+     },
+     "2": {
+      "n_pairs": 400,
+      "nonzero": 158,
+      "below_threshold": false
+     }
+    },
+    "n_seeds_below_threshold": 0
+   },
+   "text": {
+    "per_seed": {
+     "0": {
+      "n_pairs": 400,
+      "nonzero": 131,
+      "below_threshold": false
+     },
+     "1": {
+      "n_pairs": 400,
+      "nonzero": 139,
+      "below_threshold": false
+     },
+     "2": {
+      "n_pairs": 400,
+      "nonzero": 145,
+      "below_threshold": false
+     }
+    },
+    "n_seeds_below_threshold": 0
+   }
+  }
+ },
+ "incomplete": [],
+ "verdict": "NO_TRIGGER"
+}

@@ -1,0 +1,76 @@
+# 复制实验冻结件 sha256 — 2026-08-06T02:25:01Z
+# 预注册：_paper_artifacts_rc-fdedd0/复制实验_预注册判据_20260806_FROZEN.md
+
+## 代码
+main.py                          e25710304c7a605630e177798c37f3cbe0872456ef0f9f61dbc4d8b10ba725ad
+run_dualgpu.py                   0dabd7aa7524a9c64d8e059fbd7903b3a233c4446c15b694870ce26e18428fe2
+geom_requirements.py             df380e8178e0523a92682fb4584dd1792013ece36937b6401fe0c9afe394cb7a
+spike_analysis.py                85c8e804e4fb1966d5d3a9c5e39dd5e515bcafbcc92bf416fad2df36d9b60892
+replication_analysis.py          bcc12337ee4fe28cf8808facaad2cfa0dbdcc4452d23ef3bdcfaaf6acf1a452d
+build_replication_sample.py      69fff25c391b067926b64ccc6a196656e98d6f0f3ceecd5ed23904fbdfc7160e
+make_repl_jobs.py                85c737d0205966e387d3bbddf0f8f82bf3df4db507eb591d8fbc153af575dd28
+deepcad_transpiler.py            cbfbaf35e78572a1d3525ea4bbc129e8f46864abaa9b9bb6b974a5a3953dd9f9
+
+## 作业与清单
+repl_p04.json                    34d0d1aa59789f2cf6ebcb18fa9d762c94a5c70bc1aab1be4f51442604571ad4
+repl_smoke.json                  2689d7d1f49832cc8c971fbb329629aac4f68e777a4d272945638ca50583e4f8
+replication_frozen_lists.json    4e01372fd9c638669161cfa74c0d0d8df051e92689b6d95640f335d3e512bacf
+
+## 数据集目录（目录内全部文件的哈希再哈希）
+_repl_sample_400/                beb3ca24f8eab4a81f8a186ac307292ceae501f8fe62f36e1ca9c670cf47f940
+_cleantest_dedup/                b860a8e243632037660fcc3b49c4721c436fc6cfec7355c6dc4a580e2f0acb15
+
+## 验收脚本与实测产物
+bench_eval_throughput.py         70bbe0d7ca06d362aae087a23635e2c7ff8d22bdd4749a4e8dc7fb5ca9cfe16e
+bench_batch_metric_effect.py     35068f5fd7c63f33b9ac1e22d112a32e85b77f2eb53f2496b5d5a5fc945fc88c
+score_batch_effect_primary.py    9b1e26c806a944762a4251b93c72370cb65dcc2f90451a149d7d1879029b096c
+bench_p04.json                   7840dc2f4e8cd6cc1173d80823ebc46dd0736c44390483f70009849ebf7c8421
+bench_p00.json                   cc84981d75d0f9caf8f28912e35c6c3d4ec44e568f1eebfd93d6547ba4f53eb4
+bench_identical_prompts.json     e863f64d3c286efd1e066bbd1812de072134caaf5fad1cc021ba325b86111688
+bench_metric_p04.json            a212ed7b9a6d89efcf63d8391200db1634f6989d5691072a1045cbff49911005
+batch_effect_primary.json        e1d9141200a98bec1b2797726fc91b2a4bbb12fd1f8f116b41028a6a24e9c5aa
+
+## 环境
+python 3.11.15 / numpy 2.4.4 / scipy 1.17.1 / datasets 3.1.0 / torch 2.5.1+cu121 / transformers 4.46.3 / peft 0.13.2
+
+## 预注册文档与验收脚本
+复制实验_预注册判据_20260806_FROZEN.md b630efae762e04c79a0616662facc76535cac0e07ee789b103f5866a05cdfe91   # +§13 扩样规则
+verify_oracle_parallel.py                  b71391916ffd7f8cf66770be4c9c9a2a3438291a90de77506a712a9a9cad7bb5
+verify_decisions.py                        f7bbef2c689d7adb7c571d52d035ccf3c8e45aa9cb2a562c938f2bdb10b6b4e5
+regress_after_0806.py                      b510e6c7d2557aa39edaf7a62de1d0f6607131cb33ea6d55aad008ab4b6b0c4c
+verify_resume.py                           66cd8e2662ba4ea7d12a6aab352610d362b715f0542e8519b15ca4c70231e73f
+repl_run.sh                                202a486dbc48b97c2950fa1ef0eaf2ec57aa8e30c74ef10d1ddc96e35802ddd2   # 02:58 更新, 见 RUN_LOG.md
+blinded_power_check.py                     e7c774ffee208cb83d81fa618e6ba965bcfbd8ad92e5dd6f2a29709708c64562
+
+## 结果产物（判据执行后）
+repl_results/adherence_samples.jsonl       6d74f8260e8d041c9d63ea84f77a6a98499225b4e23ac31e71f2120e34a6a43c
+repl_results/geom_scores.jsonl             64c8874594412e0c2d257033b65a2f512af47421cdb46c7a9fd39f99f1c82d1f
+repl_results/partial_results.jsonl         61d9bd12f67381677b2cc274c5a8f50917727a4629e955810acf87d293ffd1c2
+repl_results/results.json                  0eb8a796ae6cb4fb88ec38934e8c6a7f02646c6ce6ed1037243fb2faa85e1a27
+repl_results/blinded_power_check.json      1b954584dfc4dffbf12d142a5c24e47190185bc8640f6374cb450ff30f757b10
+repl_verdict.json                          aaa7caa881fc0ca0307f4d8a2286a697b13923ca895589a3f3700a161cfa9ec6
+
+## Test D 重测（增补预注册，冻结于 R 臂数据产生之前）
+复制实验_TestD增补预注册_20260806.md                0a5ff59d522e6d76a6e75ee2dbde632c58e9b4c4e94074e9bc4d1e16d7ca496a
+make_testd_jobs.py                         8427e188718e1c286101791dfc3f92e8ab578da66f07383739af0c5a538d1893
+testd_analysis.py                          f81c8d62f9c0fc913892621e1a0d5f3dac702ddba0cf0c2bf24adbb34d32466e
+replD_jobs.json                            8aeb96d0caad419b35887582b03897d6f94fee10fe1ffd16b3fa82b93b26bbc9
+verify_testd.py                            883865dc8b1bafe8e6f79ce3352b9cf09982a296d2cf58c4d056e3b2e67e13bc
+
+## Test D 重测结果产物
+testd_results/adherence_samples.jsonl        f796d9f9ecea054f987e2f25f508099be8c1cf0d910752fec1750c32c55eabb0
+testd_results/geom_scores.jsonl              93a999db48328bce375c9d5fca1d26e9b529972c4ef039f8806d00184e420607
+testd_results/partial_results.jsonl          fbe7a2cddd334fba46d73f606790efa58014382d0d2d31101304286abfc92943
+testd_analysis_input/geom_scores.jsonl       70a478d5769de9526eef29ad44dc7e5bda79a75ed59b453ae908065585f26cf2
+testd_verdict.json                           71379d5da3fd92bb758a139dc70e17ca11001c2cd8eeb0b4eef1cc61e7c65ef8
+chain_testd.sh                               8edd429e8de45bd03bd318f4c7393a9a546dc14b40159da0c68ebfdea90229a6
+
+## 描述性分析与图表数据（判据之后产出，不改判）
+testd_sensitivity.py                         8cd761b13d14a670601a67ff2f073038da12643dcb64d4a36e4a7268c3b38bd1
+testd_sensitivity.json                       74188fc6d25a8b38a70a155e34bc03e0e7fe1529c1d60d71b368c2eeefe71fbd
+compute_replication_figures.py               31bbefe3c0781c17ff01e2ac1b50a394ca7765ab7f5830721e7dc7782975e711
+replication_figures_data.json                569072fca1f5c0c0a87c899b553d2338b1fac6e1663462b7eb5a7764af3362aa
+
+## 图表生成脚本（v4）
+make_fig1_v4.py                              d771aa1800f424763afcf7da695093f4918661f6fad260970636f3e1f2e33070
+make_replication_figures.py                  85fa7675d1a4130e4f336235b0a0fdcfad6515d7d351da5496eadbb4a39c8f33

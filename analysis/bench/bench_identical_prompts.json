@@ -1,0 +1,58 @@
+{
+ "ckpt": "sft_no_constraints_seed0",
+ "mode": "none",
+ "prefix": 0.0,
+ "n": 32,
+ "max_new_tokens": 750,
+ "per_batch": {
+  "8": {
+   "gpu_gen_sec": 523.4151871204376,
+   "sec_per_sample": 16.356724597513676,
+   "peak_alloc_gb": 4.027420997619629,
+   "peak_reserved_gb": 4.298828125,
+   "n_batches": 4
+  },
+  "32": {
+   "gpu_gen_sec": 103.45524406433105,
+   "sec_per_sample": 3.2329763770103455,
+   "peak_alloc_gb": 4.626394271850586,
+   "peak_reserved_gb": 6.748046875,
+   "n_batches": 1
+  }
+ },
+ "batch_invariance": {
+  "8_vs_32": {
+   "identical": 32,
+   "total": 32,
+   "fraction": 1.0,
+   "first_differing_idx": null
+  }
+ },
+ "oracle": {
+  "serial_total_sec": 67.22345876693726,
+  "sec_per_sample": 2.1007330864667892,
+  "valid_rate": 0.0,
+  "per_program_sample_sec": [
+   1.84,
+   1.83,
+   1.85,
+   1.84,
+   1.87,
+   1.82,
+   1.82,
+   1.85,
+   1.94,
+   5.48,
+   1.87,
+   1.9
+  ],
+  "max_single_sec": 5.475310325622559,
+  "timeout_setting": 10
+ },
+ "composition_at_ref_batch": {
+  "batch": 8,
+  "gpu_gen_sec": 523.4151871204376,
+  "oracle_sec": 67.22345876693726,
+  "oracle_fraction": 0.11381486672945486
+ }
+}
