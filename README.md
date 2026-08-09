@@ -58,6 +58,15 @@ Verified by running the scripts below against nothing but this repository:
 
 The first four were each checked against their frozen outputs and agree value for value.
 
+Beyond the scored results, this release also carries the model's actual outputs. Each campaign's
+`adherence_samples.jsonl` holds, per scored row, the prompt the model saw, its raw completion, the
+program extracted from that completion, and the ground-truth program — so generation-level claims
+can be checked directly rather than taken on the scores alone. The unique-generation counts the
+paper reports for the earlier 0%-prefix column (§4.5, §6) are one such claim, and they recompute
+from `data/spike_results/adherence_samples.jsonl`: counting distinct `gen_raw` per condition per
+seed over the 100 nominal samples gives one for the unconditioned baseline, one or two for the
+masked arms, and ten to sixteen across the four header-bearing arms.
+
 **Not reproducible from the release**, and stated here rather than left for a reader to
 discover: Appendix B's Table 10 (the five treatments of the tie-heavy difference distribution)
 and Table 11 (the diff-mass decomposition) have no producing script here, and of Table 12's
@@ -114,7 +123,7 @@ replication_frozen/
                               sampling time — see Appendix A. The frozen list was not edited,
                               since editing it would invalidate its own hash.
 
-data/               Complete raw per-sample geometry scores
+data/               Complete raw per-sample geometry scores, and the generations they score
   spike_results/geom_scores.jsonl        4,200 rows: six-cell matrix, all arms × seeds
   f4_results/geom_scores.jsonl           1,800 rows: initial control evaluations
   repl_results/geom_scores.jsonl         8,400 rows: 21 replication jobs × 400 programs
@@ -122,6 +131,28 @@ data/               Complete raw per-sample geometry scores
   testd_analysis_input/geom_scores.jsonl 10,800 rows: the two above, concatenated. The retest
                               verdict is computed from this and from neither results directory
                               on its own.
+  {spike,f4,repl,testd}_results/adherence_samples.jsonl   the same rows with the text: the
+                              prompt shown to the model (`prompt`), its raw completion
+                              (`gen_raw`), the program extracted from it (`program`), and the
+                              ground-truth program (`gt_code`), alongside the regex-side
+                              adherence fields. 4,200 / 1,800 / 8,400 / 2,400 rows, 26 MB in
+                              total, and the only files here from which generation-level claims
+                              — unique-generation counts, what a given arm actually wrote —
+                              can be checked. These are also the input end of the scoring chain
+                              `geom_requirements.py` implements: `score` turns them into
+                              `geom_scores.jsonl` and `summary` turns those into
+                              `evaluation_summary.json`, so the geometry scores can be
+                              regenerated rather than trusted. That path needs a CAD kernel
+                              (`cadquery`), which the reproduce section's three packages do not
+                              install; every verdict and figure script reads the scores directly
+                              and needs no kernel.
+  {spike,f4,repl,testd}_results/results.json, partial_results.jsonl, evaluation_summary.json
+                              per-condition validity and adherence roll-ups written by the
+                              evaluation harness. `results.json` is load-bearing rather than a
+                              convenience: `figures/compute_all.py` reads the initial campaign's
+                              copy for the regex-side values it asserts, and
+                              `analysis/spike_analysis.py` reads it for the pre-registered
+                              reproduction check against the frozen reference cells.
   repl_results/blinded_power_check.json  output of the blinded check, produced before any
                               effect direction or p-value was computed
   spike_verdict.json, f4_verdict.json, repl_verdict.json, testd_verdict.json
