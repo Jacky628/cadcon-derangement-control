@@ -4,17 +4,10 @@ Frozen artifacts for a study of what happens when a fine-tuned CAD code model is
 *wrong* design-intent header, and of how much of a correct header's apparent benefit is an
 artifact of scoring generated text without requiring it to execute.
 
-**Paper:** *Wrong Design Intent Is Worse Than Never Conditioning: A Derangement-Control
-Diagnosis of Header Conditioning in CAD Program Completion* — Yang Xiao, Sichuan University
-(`yangx64519@gmail.com`), [arXiv:2607.23191](https://arxiv.org/abs/2607.23191).
-
-Section and table references throughout this README follow **v4**, a referee-response revision
-that is prepared but not yet posted. The identifier currently serves v2, whose title carries a
-"Can Be" hedge and whose numbering differs from the references used below. v4 narrows the causal
-claim to the correct-to-wrong content sensitivity the control can test, states the result at the
-298 distinct model inputs the 400 programs present rather than at the program level, adds a
-within-arm measurement of movement toward the injected wrong target with the control as placebo,
-and measures the metric's ground-truth reference level for the first time.
+> **Note for reviewers.** This copy is served anonymously and the citation block is withheld
+> for the duration of double-blind review. Section and table references throughout follow the
+> submitted manuscript. Nothing else is removed: the artifacts, scripts and raw scores below are
+> the complete set.
 
 Contents: four pre-registration documents, the frozen held-out lists and decision rules, the
 complete raw per-sample geometry scores for every arm and seed of every evaluation, the frozen
