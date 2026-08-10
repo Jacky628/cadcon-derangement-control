@@ -4,13 +4,17 @@ Frozen artifacts for a study of what happens when a fine-tuned CAD code model is
 *wrong* design-intent header, and of how much of a correct header's apparent benefit is an
 artifact of scoring generated text without requiring it to execute.
 
-**Paper:** *Wrong Design Intent Is Worse Than None: A Derangement-Control Diagnosis of Header
-Conditioning in CAD Program Completion* — Yang Xiao, Sichuan University
+**Paper:** *Wrong Design Intent Is Worse Than Never Conditioning: A Derangement-Control
+Diagnosis of Header Conditioning in CAD Program Completion* — Yang Xiao, Sichuan University
 (`yangx64519@gmail.com`), [arXiv:2607.23191](https://arxiv.org/abs/2607.23191).
 
-The identifier currently serves v2, whose title carries a "Can Be" hedge and whose section
-numbering differs from the references used below; the v3 replacement quoted here is prepared
-but not yet posted.
+Section and table references throughout this README follow **v4**, a referee-response revision
+that is prepared but not yet posted. The identifier currently serves v2, whose title carries a
+"Can Be" hedge and whose numbering differs from the references used below. v4 narrows the causal
+claim to the correct-to-wrong content sensitivity the control can test, states the result at the
+298 distinct model inputs the 400 programs present rather than at the program level, adds a
+within-arm measurement of movement toward the injected wrong target with the control as placebo,
+and measures the metric's ground-truth reference level for the first time.
 
 Contents: four pre-registration documents, the frozen held-out lists and decision rules, the
 complete raw per-sample geometry scores for every arm and seed of every evaluation, the frozen
@@ -59,8 +63,9 @@ Verified by running the scripts below against nothing but this repository:
 The first four were each checked against their frozen outputs and agree value for value.
 
 Beyond the scored results, this release also carries the model's actual outputs. Each campaign's
-`adherence_samples.jsonl` holds, per scored row, the prompt the model saw, its raw completion, the
-program extracted from that completion, and the ground-truth program — so generation-level claims
+`adherence_samples.jsonl` holds, per scored row, the prompt the model saw, the model's output after
+one pass of the program extractor (`gen_raw` — *not* the untrimmed completion; see Appendix A.6),
+the program that was scored, and the ground-truth program — so generation-level claims
 can be checked directly rather than taken on the scores alone. The unique-generation counts the
 paper reports for the earlier 0%-prefix column (§4.5, §6) are one such claim, and they recompute
 from `data/spike_results/adherence_samples.jsonl`: counting distinct `gen_raw` per condition per
@@ -68,16 +73,45 @@ seed over the 100 nominal samples gives one for the unconditioned baseline, one 
 masked arms, and ten to sixteen across the four header-bearing arms.
 
 **Not reproducible from the release**, and stated here rather than left for a reader to
-discover: Appendix B's Table 10 (the five treatments of the tie-heavy difference distribution)
-and Table 11 (the diff-mass decomposition) have no producing script here, and of Table 12's
+discover: Appendix B's Table 11 (the five treatments of the tie-heavy difference distribution)
+and Table 12 (the diff-mass decomposition) have no producing script here, and of Table 13's
 four leave-one-*feature*-out rows only `all CIRCLE-containing` is in
 `data/testd_sensitivity.json` — the other three were computed with the same frozen mechanics
 but the script that produced them is not part of this release. The eleven leave-one-*profile*-out
-rows of Table 12, which carry the pre-registered guardrail, are reproducible.
+rows of Table 13, which carry the pre-registered guardrail, are reproducible.
 
 ## Layout
 
 ```
+code/               The training and generation harness, byte-identical to what ran. This is
+                    the import closure of main.py, computed by walking the import graph.
+  main.py                     defines the extractor φ (`detect_features`), header construction,
+                              held-out loading and train-leak deduplication, batched greedy
+                              generation, the first-`result` generation extractor, and LoRA
+                              fine-tuning. sha256 e2571030… matches replication_frozen/sha256s.txt.
+                              It is the project's whole pipeline file and also contains the GRPO
+                              study and CFG variant that Appendix D reports as supporting no
+                              claim; released whole because a trimmed copy would not hash to what
+                              ran.
+  deepcad_transpiler.py       THE TRANSPILER: DeepCAD JSON history → CadQuery program. main.py
+                              imports `deepcad_json_to_cadquery` / `extract_text_from_sample`
+                              from here. Every program in the corpus came out of this file.
+  build_replication_sample.py builds the deduplicated train-disjoint pool and draws the frozen
+                              stratified 400-program sample — the provenance of the dataset below
+  run_dualgpu.py              distributes evaluation jobs across the two GPUs
+  geom_requirements.py        identical to analysis/geom_requirements.py; here so code/ stands alone
+  quality_check.py            run-time condition checks imported by main.py; in the closure, but
+                              no claim rests on it
+  SHA256SUMS.txt              hashes of the six files above
+
+env/                The environment the runs actually used
+  ENVIRONMENT.md              Python 3.11.15, torch 2.5.1+cu121, transformers 4.46.3, peft 0.13.2,
+                              cadquery 2.7.0 on OCP 7.8.1.1, 2×RTX 3090. Also records that
+                              re-executing 400 frozen generations under cadquery 2.8.0 / OCP
+                              7.9.3 reproduces the executability bit and realized feature set
+                              on 400/400.
+  requirements-frozen-full.txt  complete pip freeze of that interpreter
+
 analysis/           Frozen analysis code and evaluation manifests
   ── initial campaign
   spike_analysis.py           frozen six-cell decision rules (recall, Wilcoxon machinery)
@@ -94,7 +128,7 @@ analysis/           Frozen analysis code and evaluation manifests
   testd_analysis.py           frozen retest of the control on that same sample
   blinded_power_check.py      counts non-zero pairs; contains no mean, direction or Wilcoxon path
   testd_sensitivity.py        leave-one-profile-out, the executable-only view and profile
-                              weighting (App. B). It does NOT compute Table 10's five
+                              weighting (App. B). It does NOT compute Table 11's five
                               zero-handling treatments; nothing here does.
   replication_frozen_lists.json  the 400 deduplicated programs, eleven four-tag profile
                               definitions, per-profile stratification quotas
@@ -132,8 +166,9 @@ data/               Complete raw per-sample geometry scores, and the generations
                               verdict is computed from this and from neither results directory
                               on its own.
   {spike,f4,repl,testd}_results/adherence_samples.jsonl   the same rows with the text: the
-                              prompt shown to the model (`prompt`), its raw completion
-                              (`gen_raw`), the program extracted from it (`program`), and the
+                              prompt shown to the model (`prompt`), the output of one pass
+                              of the extractor (`gen_raw` — not the untrimmed completion, see
+                              Appendix A.6), the scored program (`program`), and the
                               ground-truth program (`gt_code`), alongside the regex-side
                               adherence fields. 4,200 / 1,800 / 8,400 / 2,400 rows, 26 MB in
                               total, and the only files here from which generation-level claims
@@ -159,6 +194,12 @@ data/               Complete raw per-sample geometry scores, and the generations
   testd_sensitivity.json      output of the above: Test D robustness decompositions (App. B)
   f4_meta_seed{0,1,2}.json    control-training metadata (derangement plan, 0 header-dropout)
   sha256s_raw.txt             manifest of the initial campaign's data snapshot
+  replication_sample_400.jsonl  the 400 held-out programs materialised in full: idx, pool_row,
+                              program_sha256, four-tag profile, five-tag intent, program length,
+                              and the CadQuery source itself. Every program_sha256 is the sha256
+                              of that row's gt_code and matches the frozen sample list entry for
+                              the same idx — checked at generation time, 400/400. Per-profile
+                              counts 112/70/58/40/39/15/15/15/15/15/6, which is paper Table 1.
 
 figures/
   compute_all.py              recomputes the initial campaign and asserts 105 values
@@ -213,11 +254,9 @@ cd ../analysis && ../.venv/bin/python submission_audit.py
 
 ## What is not in this release, and why
 
-- **The training and evaluation harness** (`main.py`, `run_dualgpu.py`, the DeepCAD
-  transpiler) and **the materialised 400-program dataset**. These appear in the hash
-  manifests, so the code and data that produced the results are identified and verifiable by
-  hash, but they are not distributed here. What is released is everything needed to recompute
-  the reported numbers from the raw per-sample scores.
+- ~~The training and evaluation harness and the materialised 400-program dataset.~~ **Both are
+  now released** — see `code/` and `data/replication_sample_400.jsonl` below. The pinned
+  environment is in `env/`.
 - **The pre-launch verification scripts** tabulated in Appendix A, the post-fix regression
   check, and the two batch-invariance measurement scripts. Each of them reads the live sandbox
   or loads a fine-tuned checkpoint, so none can run against this release; shipping them would
