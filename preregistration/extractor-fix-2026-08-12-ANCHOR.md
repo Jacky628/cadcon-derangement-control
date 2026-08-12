@@ -70,8 +70,9 @@ rather than to the data, and the attribution table is fixed in advance (document
 * The pre-registration and all ten freeze artifacts were committed, and their SHA-256 hashes
   registered, **before the first generation job started** (2026-08-12 01:54:19 UTC). That
   ordering is evidenced by local version-control history only.
-* **This public deposit was made at 2026-08-12 02:12 UTC — approximately 18 minutes after
-  generation began.** No cell had completed and no score had been computed, but a reader
+* **This public deposit was made at 2026-08-12 02:14:52 UTC — 20 minutes and 33 seconds
+  after generation began** (commit `4cac027`; the figure is stated to the second because
+  precision about ordering is the only thing this file exists to provide). No cell had completed and no score had been computed, but a reader
   should not take this deposit as externally verifiable evidence that the document predates
   the data. What it does establish is that these rules, thresholds and obligations were fixed
   before any result existed.
