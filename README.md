@@ -9,7 +9,8 @@ artifact of scoring generated text without requiring it to execute.
 > submitted manuscript. Nothing else is removed: the artifacts, scripts and raw scores below are
 > the complete set.
 
-Contents: four pre-registration documents, the frozen held-out lists and decision rules, the
+Contents: four pre-registration documents (and the public anchor of a fifth, whose
+experiment is still running), the frozen held-out lists and decision rules, the
 complete raw per-sample geometry scores for every arm and seed of every evaluation, the frozen
 analysis scripts with their hash manifests, and the figure and table scripts.
 
@@ -72,6 +73,19 @@ four leave-one-*feature*-out rows only `all CIRCLE-containing` is in
 `data/testd_sensitivity.json` — the other three were computed with the same frozen mechanics
 but the script that produced them is not part of this release. The eleven leave-one-*profile*-out
 rows of Table 13, which carry the pre-registered guardrail, are reproducible.
+
+## An experiment still in progress
+
+`preregistration/extractor-fix-2026-08-12-ANCHOR.md` records the decision rules, thresholds and
+reporting obligations of a re-run that was launched on 2026-08-12 and had produced no result
+when the anchor was deposited. It addresses a defect this release already documents: the
+generation extractor truncates at the first top-level `result =` assignment while the scoring
+target is the untruncated ground-truth program, so a model that continues into a second
+modelling stage is not credited for it — and 202 of the 400 reference programs are multi-stage.
+
+The anchor fixes in advance what each possible outcome obliges, including the two that require
+limiting or withdrawing a published claim. Scoring code, verdict and run log will be added when
+the run completes, whatever it shows.
 
 ## Layout
 

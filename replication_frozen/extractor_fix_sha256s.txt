@@ -1,0 +1,19 @@
+## 提取器修复重跑（独立预注册，冻结于 2026-08-12；判据/护栏/结局映射见预注册 §5/§6/§9）
+## 生成作业启动前冻结。run_dualgpu.py 未修改（__file__ 重定向复用其调度循环）。
+提取器修复_独立预注册_20260812.md  05755bdf1d33a5e7f476d67cf87953d1b43190d9ecec0066dc29384c50b46033
+repl_fix_jobs.json                           79da79140fb4b56eb91911311f0660d5d5b662ca94a3bfcfb79f72674a3fbc96
+make_replfix_jobs.py                         9d67429a7b5df6a73a99a4e41580e46135ccb79eb239b643a09047c5e5927f3d
+replfix_extractor.py                         2b513f61a42f056a2bf75b80675f0a5a146c3f8f377bc57369f4601bad92f981
+test_replfix_extractor.py                    64ba5b05422b97f79fe2b0d24a95509be7d64ee1087fb51db34414c08b89bc59
+replfix_generate.py                          70b4c34138223379e6d92ca20de30c064d6ed48925c057a2d63c121e016488cf
+replfix_score.py                             91db7d80736d4e7872f6dc9c440d0ee8d4c185185f91b29e8f50146ab07d6362
+replfix_analysis.py                          111842847be671b09f8b6e25117f59b5e00d0bc9bfea0e60219774359008624a
+test_replfix_analysis.py                     e822be5f404df73467104d4b33b86c6879cde24b9a5c3c716770ebef10958d33
+replfix_selfcheck.py                         76ac4779c21ba7cac97f9fdea78374fd8bbada92f5a601f5ea7cd67b42b6a8e4
+
+## 修订（2026-08-12，发车前，零数据产出）
+## replfix_generate.py: --frozen-list 未 resolve 为绝对路径 -> worker 在 per-job cwd 下
+## 找不到冻结清单，27 作业在模型加载前全部快速失败。run_orchestrate 对
+## --cleantest-cache 做了 resolve 而对 --frozen-list 没做（既有不对称）。
+## 不涉及判据/度量/阈值/护栏/规则 A/结局映射，属 §12 允许的管线修复。
+replfix_generate.py（修订后）           bc611c63a559139814b3e2869ebbc50b7fc2fb72356f5fce1493370762cc86d6
