@@ -1,0 +1,73 @@
+{
+  "gate": "bit-identity self-check (pre-registration \u00a73)",
+  "passed": true,
+  "n_compared": 10800,
+  "n_identical": 10800,
+  "n_missing_counterpart": 0,
+  "missing_examples": [],
+  "per_condition": {
+    "replfix_R_correct_p04": {
+      "n": 1200,
+      "exec_match": 1200,
+      "tags_match": 1200,
+      "both_match": 1200,
+      "examples": []
+    },
+    "replfix_R_shuffled_p04": {
+      "n": 1200,
+      "exec_match": 1200,
+      "tags_match": 1200,
+      "both_match": 1200,
+      "examples": []
+    },
+    "replfix_baseline_p04": {
+      "n": 1200,
+      "exec_match": 1200,
+      "tags_match": 1200,
+      "both_match": 1200,
+      "examples": []
+    },
+    "replfix_text_correct_p04": {
+      "n": 1200,
+      "exec_match": 1200,
+      "tags_match": 1200,
+      "both_match": 1200,
+      "examples": []
+    },
+    "replfix_text_masked_p04": {
+      "n": 1200,
+      "exec_match": 1200,
+      "tags_match": 1200,
+      "both_match": 1200,
+      "examples": []
+    },
+    "replfix_text_shuffled_p04": {
+      "n": 1200,
+      "exec_match": 1200,
+      "tags_match": 1200,
+      "both_match": 1200,
+      "examples": []
+    },
+    "replfix_token_correct_p04": {
+      "n": 1200,
+      "exec_match": 1200,
+      "tags_match": 1200,
+      "both_match": 1200,
+      "examples": []
+    },
+    "replfix_token_masked_p04": {
+      "n": 1200,
+      "exec_match": 1200,
+      "tags_match": 1200,
+      "both_match": 1200,
+      "examples": []
+    },
+    "replfix_token_shuffled_p04": {
+      "n": 1200,
+      "exec_match": 1200,
+      "tags_match": 1200,
+      "both_match": 1200,
+      "examples": []
+    }
+  }
+}

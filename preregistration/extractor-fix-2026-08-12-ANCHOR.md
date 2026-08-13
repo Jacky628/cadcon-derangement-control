@@ -88,5 +88,27 @@ before loading a model; it touched no criterion, threshold, guardrail, extractio
 outcome mapping. Both the original and revised hashes are listed, and the reason is recorded
 in `../replication_frozen/REPLFIX_RUN_LOG.md`.
 
-Scoring code, verdict and run log will be added to this directory when the run completes,
-whatever the outcome.
+## Outcome (added 2026-08-13, after completion)
+
+The run completed on 2026-08-12 (27/27 cells, no failures). The gate passed first: the legacy
+rule applied to the new generations reproduced the published geometry verdicts on all
+10,800 rows and the published p-values digit for digit, so the two surfaces differ only by the
+extraction rule. The pre-registered outcome is **CONFIRMED** under both tokenizations: the
+wrong-versus-never-conditioning deficit holds direction on 3/3 seeds at the cluster unit on
+the repaired surface, and the text seed that fails the significance threshold in the published
+protocol fails here as well — it was not rescued.
+
+One guardrail failed, and it bounds what the confirmation is worth: on 62.7% of multi-stage
+generations the execution-driven rule returns exactly what the first-block rule returns,
+because the later modelling stages the model writes are themselves usually not executable.
+The two surfaces differ on 11.2% of scored rows. Per the pre-registration this may not be
+described as "the conclusion is unchanged after the fix"; the accurate statement is that the
+deficit reproduces under the limited bite the repair achieves. The declared risk to the
+paper's non-selection argument did not materialise: the executability lift is 0.0 pp in all
+nine conditions, so both definitions of `executable` coincide on every row.
+
+Scoring code, per-row scores on both surfaces, the machine verdict and the run log are in
+`../extractor_fix/` and `../replication_frozen/REPLFIX_RUN_LOG.md`. No figure from this
+protocol replaces any number in the released paper; it is an independent protocol reported
+alongside. The pre-registration document itself remains withheld for the duration of
+double-blind review (see above); its SHA-256 is on record.

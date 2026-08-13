@@ -10,7 +10,7 @@ artifact of scoring generated text without requiring it to execute.
 > the complete set.
 
 Contents: four pre-registration documents (and the public anchor of a fifth, whose
-experiment is still running), the frozen held-out lists and decision rules, the
+experiment has since completed — see below), the frozen held-out lists and decision rules, the
 complete raw per-sample geometry scores for every arm and seed of every evaluation, the frozen
 analysis scripts with their hash manifests, and the figure and table scripts.
 
@@ -74,18 +74,24 @@ four leave-one-*feature*-out rows only `all CIRCLE-containing` is in
 but the script that produced them is not part of this release. The eleven leave-one-*profile*-out
 rows of Table 13, which carry the pre-registered guardrail, are reproducible.
 
-## An experiment still in progress
+## The repaired-extractor re-run (anchored before results existed; now complete)
 
 `preregistration/extractor-fix-2026-08-12-ANCHOR.md` records the decision rules, thresholds and
-reporting obligations of a re-run that was launched on 2026-08-12 and had produced no result
-when the anchor was deposited. It addresses a defect this release already documents: the
-generation extractor truncates at the first top-level `result =` assignment while the scoring
-target is the untruncated ground-truth program, so a model that continues into a second
-modelling stage is not credited for it — and 202 of the 400 reference programs are multi-stage.
+reporting obligations of a re-run that was deposited before any result existed. It addresses a
+defect this release already documents: the generation extractor truncates at the first
+top-level `result =` assignment while the scoring target is the untruncated ground-truth
+program, so a model that continues into a second modelling stage is not credited for it — and
+202 of the 400 reference programs are multi-stage.
 
-The anchor fixes in advance what each possible outcome obliges, including the two that require
-limiting or withdrawing a published claim. Scoring code, verdict and run log will be added when
-the run completes, whatever it shows.
+The run has since completed. The legacy rule applied to the new generations reproduced the
+published geometry verdicts on all 10,800 rows and the published p-values digit for digit, and
+the pre-registered outcome is CONFIRMED under both tokenizations — bounded by a failed
+guardrail: the repair actually changes only 11.2% of scored rows, because the later modelling
+stages the model writes are usually not executable, so this may not be read as "the conclusion
+is unchanged after the fix". The anchor's Outcome section carries the details;
+`extractor_fix/` holds the scoring code, the per-row scores on both surfaces and the machine
+verdict, and `replication_frozen/REPLFIX_RUN_LOG.md` the full run log, including one
+pre-launch revision and two timing-estimate corrections made during the run.
 
 ## Layout
 

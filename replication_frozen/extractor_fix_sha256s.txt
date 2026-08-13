@@ -17,3 +17,8 @@ replfix_selfcheck.py                         76ac4779c21ba7cac97f9fdea78374fd8bb
 ## --cleantest-cache 做了 resolve 而对 --frozen-list 没做（既有不对称）。
 ## 不涉及判据/度量/阈值/护栏/规则 A/结局映射，属 §12 允许的管线修复。
 replfix_generate.py（修订后）           bc611c63a559139814b3e2869ebbc50b7fc2fb72356f5fce1493370762cc86d6
+
+## extractor_fix/ 产物（2026-08-13，重跑完成后入册）
+replfix_verdict.json                         db41d54b32a89b1f25890e9dd754b1b6dfe9f04c6367384d46e35db7f632de01
+replfix_selfcheck.json                       5fbc45ab8356c2633be01774eff0a2154609ff24ccaafe8f65213c61a6fa28dd
+replfix_scores.jsonl                         228daa60c0dfea0efe6a9e04251f4dca1941195269484caf418fa13ec31d8ec8
